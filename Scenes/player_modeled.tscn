@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dq43j5tm1u1wb" path="res://Models/character.gltf" id="1_cvr5i"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
+size = Vector3(0.28564453, 3.017334, 0.32861328)
+
 [node name="blockbench_export" unique_id=1651016903 instance=ExtResource("1_cvr5i")]
 
 [node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(1445817782) index="0" unique_id=925624032]
@@ -13,3 +16,9 @@ bones/7/rotation = Quaternion(0, 0, -0.043619387, 0.99904823)
 
 [node name="group" parent="group/Skeleton3D" index="0" unique_id=158900907]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="2" unique_id=1788279989]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" index="0" unique_id=1289511295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07543945, 1.5611572, 0.056396484)
+shape = SubResource("BoxShape3D_8qdug")
