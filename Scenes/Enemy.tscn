@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d08e75xxf050j"]
+
+[ext_resource type="Script" uid="uid://dexgdkxaf6eyo" path="res://Scripts/enemy.gd" id="1_3homo"]
+[ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="1_jj8qi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2k3eg"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2k3eg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_77ha8"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1821107149]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_3homo")
+
+[node name="Killzone" parent="." unique_id=388224691 instance=ExtResource("1_jj8qi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone" unique_id=748526334]
+transform = Transform3D(1.3474118, 0, 0, 0, 1.2112098, 0, 0, 0, 1.3810438, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_2k3eg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=354933543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+layers = 3
+mesh = SubResource("CapsuleMesh_2k3eg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=555737230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99517596, 0)
+shape = SubResource("CapsuleShape3D_77ha8")

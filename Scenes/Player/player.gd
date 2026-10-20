@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Player
 @onready var pivot: Node3D = $cameraOrigin
 @onready var blockbench_export: Node3D = $blockbench_export
 
