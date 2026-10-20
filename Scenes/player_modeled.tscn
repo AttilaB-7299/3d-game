@@ -1,24 +1,21 @@
 [gd_scene format=3 uid="uid://ww0wg868dvjy"]
 
 [ext_resource type="PackedScene" uid="uid://dq43j5tm1u1wb" path="res://Models/character.gltf" id="1_cvr5i"]
+[ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="2_bmsl7"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
-size = Vector3(0.28564453, 3.017334, 0.32861328)
+[sub_resource type="GDScript" id="GDScript_wfxnc"]
 
 [node name="blockbench_export" unique_id=1651016903 instance=ExtResource("1_cvr5i")]
+script = ExtResource("2_bmsl7")
 
 [node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(1445817782) index="0" unique_id=925624032]
 bones/1/rotation = Quaternion(0, 0, 0.065403126, 0.99785894)
 bones/2/rotation = Quaternion(0, 0, -0.065403126, 0.99785894)
-bones/3/rotation = Quaternion(0, -0.043619387, 0, 0.99904823)
 bones/6/rotation = Quaternion(0, 0, 0.043619387, 0.99904823)
 bones/7/rotation = Quaternion(0, 0, -0.043619387, 0.99904823)
 
 [node name="group" parent="group/Skeleton3D" index="0" unique_id=158900907]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="2" unique_id=1788279989]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" index="0" unique_id=1289511295]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07543945, 1.5611572, 0.056396484)
-shape = SubResource("BoxShape3D_8qdug")
+[node name="AnimationPlayer" parent="." index="1" unique_id=1463703694]
+script = SubResource("GDScript_wfxnc")

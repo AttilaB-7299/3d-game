@@ -1,19 +1,11 @@
 [gd_scene format=3 uid="uid://b7kw64kmr63p7"]
 
 [ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Scenes/Player/player.gd" id="1_s0eop"]
-[ext_resource type="PackedScene" uid="uid://dq43j5tm1u1wb" path="res://Models/character.gltf" id="3_h54ih"]
+[ext_resource type="PackedScene" uid="uid://ww0wg868dvjy" path="res://Scenes/player_modeled.tscn" id="3_h54ih"]
 [ext_resource type="Script" uid="uid://i5md25ocnwgk" path="res://Scripts/camera_3d.gd" id="4_ude3g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2k3eg"]
 size = Vector3(0.50805664, 0.75878906, 0.38476563)
-
-[sub_resource type="Animation" id="Animation_ude3g"]
-resource_name = "walk"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmcll"]
-_data = {
-&"walk": SubResource("Animation_ude3g")
-}
 
 [node name="Player" type="CharacterBody3D" unique_id=153155451]
 collision_layer = 2
@@ -25,7 +17,7 @@ transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.011108398, 1.34273
 shape = SubResource("BoxShape3D_2k3eg")
 
 [node name="cameraOrigin" type="Node3D" parent="." unique_id=1941544648]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8235414, -0.0006020665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2976375, 0.1848256)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="cameraOrigin" unique_id=234929087]
 spring_length = 2.0
@@ -35,8 +27,4 @@ margin = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82348347, 0.9941026)
 script = ExtResource("4_ude3g")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1029540578]
-libraries/ = SubResource("AnimationLibrary_jmcll")
-
 [node name="blockbench_export" parent="." unique_id=1651016903 instance=ExtResource("3_h54ih")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

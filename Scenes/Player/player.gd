@@ -1,9 +1,7 @@
 extends CharacterBody3D
 
 @onready var pivot: Node3D = $cameraOrigin
-@onready var anim_player = $AnimationPlayer
-
-const ANIMATION_RES = preload("uid://cakes75qtkxtt") as Animation
+@onready var blockbench_export: Node3D = $blockbench_export
 
 @export var sens = 0.5
 const SPEED = 5.0
@@ -17,14 +15,6 @@ var rotation_y := 0.0
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED 
-
-	var anim_library = anim_player.get_animation_library("")
-	if not anim_library:
-		anim_library = AnimationLibrary.new()
-		anim_player.add_animation_library("", anim_library)
-		
-	if ANIMATION_RES:
-		anim_library.add_animation("my_new_animation", ANIMATION_RES)	
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -40,9 +30,6 @@ func _physics_process(delta: float) -> void:
 	# Handle Sprint
 	if Input.is_action_pressed("sprint") and is_on_floor():
 		sprintSpeed = 1.75
-		# Play your animation here when sprinting if desired:
-		# if not anim_player.is_playing() or anim_player.current_animation != "my_new_animation":
-		# 	anim_player.play("my_new_animation")
 	if Input.is_action_just_released("sprint"):
 		sprintSpeed = 1
 		# anim_player.stop()
@@ -61,7 +48,7 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		anim_player.play("walk")
+		blockbench_export._playAnim("walk")
 		velocity.x = direction.x * SPEED * sprintSpeed
 		velocity.z = direction.z * SPEED * sprintSpeed
 	else:
