@@ -32,15 +32,16 @@ func _physics_process(_delta: float) -> void:
 					break
 
 func hurt(player: Player) -> void:
-	player.setHealth(player.getHealth() - 1)
-	print(player.getHealth())
-	can_hurt = false
+	if current_owner is not Player:
+		player.setHealth(player.getHealth() - 1)
+		print(player.getHealth())
+		can_hurt = false
 
-	if player.getHealth() <= 0:
-		print("YOU DIED")
-		timer.start()
-	else:
-		damage_buffer.start()
+		if player.getHealth() <= 0:
+			print("YOU DIED")
+			timer.start()
+		else:
+			damage_buffer.start()
 
 func _on_timer_timeout() -> void:
 	print("RELOADING GAME")
