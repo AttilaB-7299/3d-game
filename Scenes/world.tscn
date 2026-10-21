@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8a0lwxapeqbc"]
 
-[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Scenes/Player/Player.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Models/Player/Player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_go701"]
 [ext_resource type="Texture2D" uid="uid://dikfilehvjp2a" path="res://meshtextures/Ground/Grass_Lush.png" id="3_fo5ed"]
 [ext_resource type="Texture2D" uid="uid://dstxk64537f3j" path="res://meshtextures/Bricks/Bricks_Red.png" id="4_5ukr8"]

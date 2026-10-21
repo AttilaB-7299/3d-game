@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://b7kw64kmr63p7"]
 
-[ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Scenes/Player/player.gd" id="1_s0eop"]
+[ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Models/Player/player.gd" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://ww0wg868dvjy" path="res://Scenes/player_modeled.tscn" id="3_h54ih"]
 [ext_resource type="Script" uid="uid://i5md25ocnwgk" path="res://Scripts/camera_3d.gd" id="4_ude3g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2k3eg"]
 size = Vector3(0.50805664, 0.75878906, 0.38476563)
 
-[node name="Player" type="CharacterBody3D" unique_id=153155451]
+[node name="Player" type="CharacterBody3D" unique_id=153155451 groups=["Player"]]
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_s0eop")

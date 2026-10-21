@@ -2,10 +2,16 @@ extends CharacterBody3D
 class_name Player
 @onready var pivot: Node3D = $cameraOrigin
 @onready var blockbench_export: Node3D = $blockbench_export
+const MAX_HEALTH = 5
 
+@export var health := MAX_HEALTH
 @export var sens = 0.5
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+func getHealth():
+	return health
+func setHealth(newHealth: int):
+	health = newHealth
 
 var jumps := 0
 var sprintSpeed := 1.0
