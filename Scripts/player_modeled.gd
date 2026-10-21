@@ -3,8 +3,9 @@ extends Node
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
-func _playAnim(String):
-	if (String == "walk" || String == "Walk" || String == "WALK"):
-		animation_player.play("animation")
+func _playAnim(anim_name: String):
+	if (anim_name == animation_player.current_animation):
+		pass
 	else:
-		animation_player.play(String)
+		animation_player.stop()
+		animation_player.play(anim_name)

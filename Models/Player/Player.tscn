@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://b7kw64kmr63p7"]
 
 [ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Models/Player/player.gd" id="1_s0eop"]
-[ext_resource type="PackedScene" uid="uid://ww0wg868dvjy" path="res://Scenes/player_modeled.tscn" id="3_h54ih"]
+[ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_xd66b"]
+[ext_resource type="PackedScene" uid="uid://c1yc8xlyrhpj1" path="res://Models/Player/character.gltf" id="4_ijhft"]
 [ext_resource type="Script" uid="uid://i5md25ocnwgk" path="res://Scripts/camera_3d.gd" id="4_ude3g"]
+[ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="5_5m70n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
+size = Vector3(1, 2.5044632, 2.745102)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2k3eg"]
 size = Vector3(0.50805664, 0.75878906, 0.38476563)
@@ -11,6 +16,12 @@ size = Vector3(0.50805664, 0.75878906, 0.38476563)
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_s0eop")
+
+[node name="attackBox" parent="." unique_id=388224691 instance=ExtResource("2_xd66b")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="attackBox" unique_id=517869495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3418617, -1.685112)
+shape = SubResource("BoxShape3D_8qdug")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=192644074]
 transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.011108398, 1.342735, -0.010528594)
@@ -27,4 +38,5 @@ margin = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82348347, 0.9941026)
 script = ExtResource("4_ude3g")
 
-[node name="blockbench_export" parent="." unique_id=1651016903 instance=ExtResource("3_h54ih")]
+[node name="blockbench_export" parent="." unique_id=1412993747 instance=ExtResource("4_ijhft")]
+script = ExtResource("5_5m70n")

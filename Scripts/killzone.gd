@@ -1,19 +1,35 @@
 extends Area3D
-
+class_name Killzone
 @onready var timer: Timer = $Timer
 @onready var damage_buffer: Timer = $DamageBuffer
-
+@export var current_owner = "null" 
+func _setOwner(newOwner: String):
+	current_owner = newOwner
+func _getOwner():
+	return current_owner
 var can_hurt := true
-
+func _hitboxDisable():
+	monitoring = false
+	monitoring = false
+	set_deferred("monitoring", false)
+	set_deferred("monitorable", false)  
+func _hitboxEnable():
+	monitorable = true
+	monitoring = true
+	set_deferred("monitoring", true)  
+	set_deferred("monitorable", true)  
 func _physics_process(_delta: float) -> void:
 	if not can_hurt:
 		return
-
-	for body in get_overlapping_bodies():
-		var player := body as Player
-		if player != null:
-			hurt(player)
-			break
+	if monitoring:
+		for body in get_overlapping_bodies():
+			if (body.name != current_owner):
+				var player := body as Player
+				if body is Enemy:
+					body.queue_free()
+				if body is Player:
+					hurt(player)
+					break
 
 func hurt(player: Player) -> void:
 	player.setHealth(player.getHealth() - 1)
