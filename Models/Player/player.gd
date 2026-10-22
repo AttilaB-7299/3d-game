@@ -73,7 +73,6 @@ func handleAttack():
 		await get_tree().create_timer(0.5).timeout
 		print("ENABLE ATTACK")
 		attack._hitboxEnable()
-		#if (time_since_last_hit < 1.0):
 		if (attack_count < 3):
 			attack_count += 1
 		else:
@@ -103,7 +102,7 @@ func handleJump():
 func handleMovement():
 	var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if (!input_dir):
+	if (!input_dir && (running || direction)):
 		blockbench_export._stopAnim()
 	if direction:
 		moving = true
@@ -120,7 +119,6 @@ func handleMovement():
 	if Input.is_action_pressed("sprint") and is_on_floor():
 		running = true
 		sprintSpeed = 1.75
-		#blockbench_export._playAnim("run")
 	if Input.is_action_just_released("sprint"):
 		running = false
 		if (moving):

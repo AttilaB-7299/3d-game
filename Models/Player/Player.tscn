@@ -40,5 +40,3 @@ script = ExtResource("4_ude3g")
 
 [node name="blockbench_export" parent="." unique_id=112132658 instance=ExtResource("4_ijhft")]
 script = ExtResource("5_5m70n")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1356887472]
