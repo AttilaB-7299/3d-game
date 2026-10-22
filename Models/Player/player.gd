@@ -118,7 +118,7 @@ func handleMovement():
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	if Input.is_action_pressed("sprint") and is_on_floor():
 		running = true
-		sprintSpeed = 1.75
+		sprintSpeed = 2.25
 	if Input.is_action_just_released("sprint"):
 		running = false
 		if (moving):
