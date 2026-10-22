@@ -30,16 +30,20 @@ grow_vertical = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1904321200]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=681977612]
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=681977612]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Play"
 
-[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=381418302]
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=381418302]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Settings"
 
-[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer" unique_id=490802239]
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=490802239]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
