@@ -41,21 +41,10 @@ func _physics_process(delta: float) -> void:
 	handleAttack()
 	handleMovement()
 	handleJump()
+	if Input.is_action_just_pressed("reload"):
+		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
-	# Get the input direction and handle the movement/deceleration.
-	#var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
-	#var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	#if direction:
-		#moving = true
-		#if (!hitting && !running):
-			#blockbench_export._playAnim("walk")
-		#velocity.x = direction.x * SPEED * sprintSpeed
-		#velocity.z = direction.z * SPEED * sprintSpeed
-	#else:
-		#moving = false
-		#velocity.x = move_toward(velocity.x, 0, SPEED)
-		#velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
 
@@ -108,7 +97,7 @@ func handleMovement():
 		moving = true
 		if (!hitting && !running):
 			blockbench_export._playAnim("walk")
-		elif (running):
+		elif (running && !hitting):
 			blockbench_export._playAnim("run")
 		velocity.x = direction.x * SPEED * sprintSpeed
 		velocity.z = direction.z * SPEED * sprintSpeed
