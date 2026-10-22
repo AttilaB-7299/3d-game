@@ -134,4 +134,5 @@ shape = SubResource("BoxShape3D_8qdug")
 [node name="Enemy" parent="." unique_id=1821107149 instance=ExtResource("6_5ukr8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5969467, 0, -5.932735)
 
-[node name="HealthBar" parent="." unique_id=317919888 instance=ExtResource("8_k7acu")]
+[node name="HealthBar" parent="." unique_id=317919888 node_paths=PackedStringArray("player") instance=ExtResource("8_k7acu")]
+player = NodePath("../Player")

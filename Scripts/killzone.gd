@@ -33,7 +33,7 @@ func _physics_process(_delta: float) -> void:
 
 func hurt(player: Player) -> void:
 	if current_owner is not Player:
-		player.setHealth(player.getHealth() - 1)
+		player.damage(1)
 		print(player.getHealth())
 		can_hurt = false
 

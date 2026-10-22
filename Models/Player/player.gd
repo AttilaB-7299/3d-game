@@ -1,5 +1,6 @@
 extends CharacterBody3D
 class_name Player
+signal took_damage
 const SPEED = 5.0
 const JUMP_VELOCITY = 5.5
 const GRAV_MULTIPLIER = 1.5
@@ -20,6 +21,9 @@ func maxHealth():
 	return MAX_HEALTH
 func getHealth():
 	return health
+func damage(damage: int):
+	health -= damage
+	took_damage.emit()
 func setHealth(newHealth: int):
 	health = newHealth
 func attackAmount():
@@ -48,9 +52,6 @@ func _physics_process(delta: float) -> void:
 	handleAttack()
 	handleMovement()
 	handleJump()
-	if Input.is_action_just_pressed("reload"):
-		get_tree().call_deferred("reload_current_scene")
-
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	# Get the input direction and handle the movement/deceleration.

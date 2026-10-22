@@ -2,20 +2,6 @@
 
 [ext_resource type="Script" uid="uid://xqwa33434mbi" path="res://Scripts/health_bar.gd" id="1_1f0m8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_175jx"]
-bg_color = Color(0.6276721, 0.051875025, 9.62615e-08, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsdkc"]
-bg_color = Color(0, 0.72993, 0.20866084, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
 [node name="HealthBar" type="CanvasLayer" unique_id=317919888]
 script = ExtResource("1_1f0m8")
 
@@ -27,5 +13,3 @@ anchor_bottom = 1.0
 offset_top = -79.0
 offset_right = 96.0
 grow_vertical = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_175jx")
-theme_override_styles/fill = SubResource("StyleBoxFlat_lsdkc")
