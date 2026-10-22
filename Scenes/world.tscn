@@ -11,6 +11,7 @@
 size = Vector3(9.649048, 5.4746094, 46.419464)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2k3eg"]
+size = Vector3(218.70483, 1, 182.36551)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7acu"]
 albedo_texture = ExtResource("3_fo5ed")
@@ -65,13 +66,14 @@ shape = SubResource("BoxShape3D_5a7ea")
 [node name="WorldElements" type="Node" parent="." unique_id=163470596]
 
 [node name="Floor" type="MeshInstance3D" parent="WorldElements" unique_id=1068473924]
-transform = Transform3D(18.337536, 0, 0, 0, 1, 0, 0, 0, 19.718084, 0, 0, 0)
+transform = Transform3D(18.337536, 0, 0, 0, 1, 0, 0, 0, 19.718084, 988.48315, 0, -310.4115)
 mesh = SubResource("BoxMesh_2k3eg")
 surface_material_override/0 = SubResource("StandardMaterial3D_k7acu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WorldElements/Floor" unique_id=7762314]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldElements/Floor/StaticBody3D" unique_id=940561558]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, -53.9236, 0, 15.5872965)
 shape = SubResource("ConvexPolygonShape3D_5a7ea")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="WorldElements" unique_id=735814649]

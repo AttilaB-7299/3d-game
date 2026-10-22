@@ -2,15 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Models/Player/player.gd" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_xd66b"]
-[ext_resource type="PackedScene" uid="uid://cfm47xxudptk3" path="res://Models/Player/character.gltf" id="4_ijhft"]
+[ext_resource type="PackedScene" uid="uid://bpqp0tjps22a" path="res://Models/Player/character.gltf" id="4_ijhft"]
 [ext_resource type="Script" uid="uid://i5md25ocnwgk" path="res://Scripts/camera_3d.gd" id="4_ude3g"]
 [ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="5_5m70n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
 size = Vector3(1, 2.5044632, 1.6826134)
-
-[sub_resource type="BoxMesh" id="BoxMesh_2k3eg"]
-size = Vector3(1, 1, 1.8622437)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2k3eg"]
 size = Vector3(0.50805664, 0.75878906, 0.38476563)
@@ -25,10 +22,6 @@ script = ExtResource("1_s0eop")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="attackBox" unique_id=517869495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1538256, 0, 1.3418617, -1.1168976)
 shape = SubResource("BoxShape3D_8qdug")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="attackBox/CollisionShape3D" unique_id=565220546]
-transform = Transform3D(1, 0, 0, 0, 0.022758901, 0, 0, 0, 0.91042614, 0, 0, 0.011974931)
-mesh = SubResource("BoxMesh_2k3eg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=192644074]
 transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.011108398, 1.342735, -0.010528594)
@@ -45,5 +38,7 @@ margin = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82348347, 0.9941026)
 script = ExtResource("4_ude3g")
 
-[node name="blockbench_export" parent="." unique_id=1563093154 instance=ExtResource("4_ijhft")]
+[node name="blockbench_export" parent="." unique_id=112132658 instance=ExtResource("4_ijhft")]
 script = ExtResource("5_5m70n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1356887472]

@@ -2,7 +2,8 @@ extends Node
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var player: Player = $".."
-
+func _stopAnim():
+	animation_player.stop()
 func _playAnim(anim_name: String):
 	var user = player as Player
 	var attack_count = user.attackAmount() +1
