@@ -2,14 +2,46 @@
 
 [ext_resource type="Script" uid="uid://xqwa33434mbi" path="res://Scripts/health_bar.gd" id="1_1f0m8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vm0tb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfqi3"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ul6f"]
+bg_color = Color(0, 0, 0, 0.07058824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7572o"]
+bg_color = Color(0, 1, 0, 1)
+
 [node name="HealthBar" type="CanvasLayer" unique_id=317919888]
 script = ExtResource("1_1f0m8")
+
+[node name="DamageBar" type="ProgressBar" parent="." unique_id=2138932198]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -83.0
+offset_right = 405.0
+offset_bottom = -3.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_vm0tb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nfqi3")
+value = 75.0
+show_percentage = false
 
 [node name="healthBar" type="ProgressBar" parent="." unique_id=15348810]
 custom_minimum_size = Vector2(400, 5)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -79.0
-offset_right = 96.0
+offset_left = 5.0
+offset_top = -83.0
+offset_right = 405.0
+offset_bottom = -3.0
 grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_4ul6f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7572o")
+value = 50.0
+show_percentage = false
