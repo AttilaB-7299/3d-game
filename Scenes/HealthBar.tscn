@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cv1ojaqjgvlnm"]
 
 [ext_resource type="Script" uid="uid://xqwa33434mbi" path="res://Scripts/health_bar.gd" id="1_1f0m8"]
+[ext_resource type="Texture2D" uid="uid://cly4rqfhvv6ct" path="res://imported/health_bar_frame.png" id="2_25q3q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vm0tb"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfqi3"]
 bg_color = Color(1, 0, 0, 1)
@@ -21,11 +22,12 @@ script = ExtResource("1_1f0m8")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -83.0
-offset_right = 405.0
-offset_bottom = -3.0
+offset_left = 40.0
+offset_top = -128.0
+offset_right = 440.0
+offset_bottom = -48.0
 grow_vertical = 0
+scale = Vector2(0.8, 0.8)
 theme_override_styles/background = SubResource("StyleBoxFlat_vm0tb")
 theme_override_styles/fill = SubResource("StyleBoxFlat_nfqi3")
 value = 75.0
@@ -36,12 +38,18 @@ custom_minimum_size = Vector2(400, 5)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -83.0
-offset_right = 405.0
-offset_bottom = -3.0
+offset_left = 40.0
+offset_top = -128.0
+offset_right = 440.0
+offset_bottom = -48.0
 grow_vertical = 0
+scale = Vector2(0.8, 0.8)
 theme_override_styles/background = SubResource("StyleBoxFlat_4ul6f")
 theme_override_styles/fill = SubResource("StyleBoxFlat_7572o")
 value = 50.0
 show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1897543669]
+position = Vector2(198, 552)
+scale = Vector2(0.8, 0.802)
+texture = ExtResource("2_25q3q")
