@@ -1,6 +1,5 @@
 extends CharacterBody3D
 class_name Player
-const MAX_HEALTH = 5
 const SPEED = 5.0
 const JUMP_VELOCITY = 5.5
 const GRAV_MULTIPLIER = 1.5
@@ -8,12 +7,17 @@ var moving = false
 var hitting = false
 var attack_count = 0
 var running = false
+var MAX_HEALTH = 5
 @onready var pivot: Node3D = $cameraOrigin
 @onready var blockbench_export: Node3D = $blockbench_export
 @onready var attack_box: Area3D = $attackBox
-@export var health := MAX_HEALTH
+@export var health = MAX_HEALTH
 @export var sens = 0.5
 
+func changeMaxHealth(change: int):
+	MAX_HEALTH += change
+func maxHealth():
+	return MAX_HEALTH
 func getHealth():
 	return health
 func setHealth(newHealth: int):
@@ -27,6 +31,7 @@ var rotation_x := 0.0
 var rotation_y := 0.0
 
 func _ready() -> void:
+	add_to_group("player")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	var attack = attack_box as Killzone
 	attack._setOwner("Player")
@@ -37,12 +42,14 @@ func _input(event):
 		pivot.rotate_x(deg_to_rad(-event.relative.y * sens))
 		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
 func _physics_process(delta: float) -> void:	
+	if not is_inside_tree():
+		return
 	gravity(delta)
 	handleAttack()
 	handleMovement()
 	handleJump()
 	if Input.is_action_just_pressed("reload"):
-		get_tree().reload_current_scene()
+		get_tree().call_deferred("reload_current_scene")
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	

@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://8a0lwxapeqbc"]
 
 [ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Models/Player/Player.tscn" id="1_a02cp"]
+[ext_resource type="Script" uid="uid://dyjqck5yorbjw" path="res://Scripts/world.gd" id="1_o06y3"]
 [ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_go701"]
 [ext_resource type="Texture2D" uid="uid://dikfilehvjp2a" path="res://meshtextures/Ground/Grass_Lush.png" id="3_fo5ed"]
 [ext_resource type="Texture2D" uid="uid://dstxk64537f3j" path="res://meshtextures/Bricks/Bricks_Red.png" id="4_5ukr8"]
 [ext_resource type="Texture2D" uid="uid://dewowc1v12udo" path="res://meshtextures/Metal/Metal_Plate.png" id="5_o06y3"]
 [ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Scenes/Enemy.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://Scenes/HealthBar.tscn" id="8_k7acu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5a7ea"]
 size = Vector3(9.649048, 5.4746094, 46.419464)
@@ -52,6 +54,7 @@ albedo_texture = ExtResource("5_o06y3")
 size = Vector3(3.99469, 2.0024414, 1)
 
 [node name="World" type="Node3D" unique_id=1752536894]
+script = ExtResource("1_o06y3")
 
 [node name="Player" parent="." unique_id=153155451 instance=ExtResource("1_a02cp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -130,3 +133,5 @@ shape = SubResource("BoxShape3D_8qdug")
 
 [node name="Enemy" parent="." unique_id=1821107149 instance=ExtResource("6_5ukr8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5969467, 0, -5.932735)
+
+[node name="HealthBar" parent="." unique_id=317919888 instance=ExtResource("8_k7acu")]
