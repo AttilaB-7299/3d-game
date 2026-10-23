@@ -49,7 +49,13 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_7572o")
 value = 50.0
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1897543669]
-position = Vector2(198, 552)
-scale = Vector2(0.8, 0.802)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1038316697]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -168.0
+offset_right = 500.0
+offset_bottom = 12.0
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_25q3q")
