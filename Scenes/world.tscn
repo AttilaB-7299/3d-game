@@ -60,7 +60,7 @@ script = ExtResource("1_o06y3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="DeathBoxDown" parent="." unique_id=388224691 instance=ExtResource("2_go701")]
-transform = Transform3D(1.1298711, 0, 0, 0, 1, 0, 0, 0, 1.0937092, 0, -4.785433, 0)
+transform = Transform3D(159.02158, 0, 0, 0, 1, 0, 0, 0, 121.18524, 0, -4.785433, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathBoxDown" unique_id=483528308]
 transform = Transform3D(4.3722954, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637453, -3.0466366, -1.2687225)

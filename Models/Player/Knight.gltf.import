@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p3nbr81drdbc"
-path="res://.godot/imported/KnightUnarmed.gltf-27c82c241a297233e29b82c12200b542.scn"
+uid="uid://b0dlxy378sw7k"
+path="res://.godot/imported/Knight.gltf-9e26c6eb1b380a273c3c11dbe8d38992.scn"
 
 [deps]
 
-source_file="res://Models/Player/KnightUnarmed.gltf"
-dest_files=["res://.godot/imported/KnightUnarmed.gltf-27c82c241a297233e29b82c12200b542.scn"]
+source_file="res://Models/Player/Knight.gltf"
+dest_files=["res://.godot/imported/Knight.gltf-9e26c6eb1b380a273c3c11dbe8d38992.scn"]
 
 [params]
 

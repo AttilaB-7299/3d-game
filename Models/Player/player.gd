@@ -4,7 +4,7 @@ signal took_damage
 const SPEED = 5.0
 const JUMP_VELOCITY = 5.5
 const GRAV_MULTIPLIER = 1.5
-var moving = false
+var walking = false
 var hitting = false
 var attack_count = 0
 var running = false
@@ -101,11 +101,11 @@ func handleAttack():
 func fixAnim():
 	if hitting:
 		pass
-	elif moving:
-		#change this
+	elif walking:
+		blockbench_export._animBlend("walk", 0.3)
 		pass
-	elif (!moving and !hitting):
-		#blockbench_export._playAnim("default")
+	elif (!walking and !hitting && !running):
+		blockbench_export._animBlend("default", 0.2)
 		pass
 func handleJump():
 	if Input.is_action_just_pressed("jump") and (is_on_floor() || jumps < 3):
@@ -116,18 +116,21 @@ func handleJump():
 func handleMovement():
 	var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if (!input_dir && (running || direction)):
-		blockbench_export._stopAnim()
+	if (!input_dir && (running || walking)):
+		blockbench_export._animBlend("default", 0.2)
+		#blockbench_export._stopAnim()
 	if direction:
-		moving = true
 		if (!hitting && !running):
-			blockbench_export._playAnim("walk")
+			blockbench_export._animBlend("walk", 0.2)
+			walking = true
 		elif (running && !hitting):
-			blockbench_export._playAnim("run")
+			blockbench_export._animBlend("run", 0.2)
+			running = true
 		velocity.x = direction.x * SPEED * sprintSpeed
 		velocity.z = direction.z * SPEED * sprintSpeed
 	else:
-		moving = false
+		walking = false
+		running = false
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	if Input.is_action_pressed("sprint") and is_on_floor():
@@ -135,8 +138,9 @@ func handleMovement():
 		sprintSpeed = 1.75
 	if Input.is_action_just_released("sprint"):
 		running = false
-		if (moving):
-			blockbench_export._playAnim("walk")
+		if (direction):
+			blockbench_export._animBlend("walk", 0.2)
 		else:
-			blockbench_export._playAnim("default")
+			blockbench_export._stopAnim()
+			blockbench_export._animBlend("default", 0.2)
 		sprintSpeed = 1
