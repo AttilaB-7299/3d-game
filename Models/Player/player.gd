@@ -15,6 +15,9 @@ var MAX_HEALTH = 5
 @export var health = MAX_HEALTH
 @export var sens = 0.5
 
+const pause_menu = preload("res://UI/Menu/pause_menu.tscn")
+
+
 func changeMaxHealth(change: int):
 	MAX_HEALTH += change
 func maxHealth():
@@ -52,10 +55,12 @@ func _physics_process(delta: float) -> void:
 	handleAttack()
 	handleMovement()
 	handleJump()
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
-	if Input.is_action_just_pressed("reload scene"):
-		get_tree().reload_current_scene()
+	# if Input.is_action_just_pressed("quit"):
+	# 	get_tree().quit()
+	if Input.is_action_just_pressed("pause game"):
+		get_tree().current_scene.add_child(pause_menu.instantiate())
+		get_tree().paused = true
+		# get_tree().reload_current_scene()
 	# Get the input direction and handle the movement/deceleration.
 	#var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
 	#var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

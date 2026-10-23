@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://mtnlrt5p6qw5"]
+
+[ext_resource type="Script" uid="uid://cdprbvqpaf83e" path="res://UI/Menu/pause_menu.gd" id="1_ixkum"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=60110502]
+process_mode = 3
+script = ExtResource("1_ixkum")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=235188354]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5411765)
+
+[node name="Control" type="Control" parent="." unique_id=1036006479]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=196957143]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 101.0
+offset_right = 704.0
+offset_bottom = 145.0
+text = "Game Paused"
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=942891286]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=1049125456]
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=182823518]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Continue"
+
+[node name="SettingsButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1689824513]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Settings"
+
+[node name="MainMenuButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=1879939484]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
