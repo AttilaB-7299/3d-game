@@ -54,6 +54,8 @@ func _physics_process(delta: float) -> void:
 	handleJump()
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
+	if Input.is_action_just_pressed("reload scene"):
+		get_tree().reload_current_scene()
 	# Get the input direction and handle the movement/deceleration.
 	#var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
 	#var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -79,7 +81,7 @@ func handleAttack():
 			return
 		hitting = true
 		var attack = attack_box as Killzone 
-		blockbench_export._playAnim("attack")
+		blockbench_export._animBlend("attack", 0.2)
 		#should be the duration of anim
 		await get_tree().create_timer(0.5).timeout
 		print("ENABLE ATTACK")
@@ -103,7 +105,8 @@ func fixAnim():
 		#change this
 		pass
 	elif (!moving and !hitting):
-		blockbench_export._playAnim("default")
+		#blockbench_export._playAnim("default")
+		pass
 func handleJump():
 	if Input.is_action_just_pressed("jump") and (is_on_floor() || jumps < 3):
 		jumps += 1
@@ -119,7 +122,7 @@ func handleMovement():
 		moving = true
 		if (!hitting && !running):
 			blockbench_export._playAnim("walk")
-		elif (running):
+		elif (running && !hitting):
 			blockbench_export._playAnim("run")
 		velocity.x = direction.x * SPEED * sprintSpeed
 		velocity.z = direction.z * SPEED * sprintSpeed
