@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Models/Player/player.gd" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_xd66b"]
+[ext_resource type="PackedScene" uid="uid://ccptbgtlxn2n" path="res://Models/Player/player_camera.tscn" id="3_ijhft"]
 [ext_resource type="PackedScene" uid="uid://b0dlxy378sw7k" path="res://Models/Player/Knight.gltf" id="4_ijhft"]
-[ext_resource type="Script" uid="uid://i5md25ocnwgk" path="res://Scripts/camera_3d.gd" id="4_ude3g"]
 [ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="5_5m70n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
@@ -27,16 +27,11 @@ shape = SubResource("BoxShape3D_8qdug")
 transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.011108398, 1.1720662, -0.010528594)
 shape = SubResource("BoxShape3D_2k3eg")
 
-[node name="cameraOrigin" type="Node3D" parent="." unique_id=1941544648]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2976375, 0.1848256)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="cameraOrigin" unique_id=234929087]
-spring_length = 2.0
-margin = 0.5
-
-[node name="Camera3D" type="Camera3D" parent="cameraOrigin/SpringArm3D" unique_id=877081381]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82348347, 0.9941026)
-script = ExtResource("4_ude3g")
+[node name="PlayerCamera" parent="." unique_id=1482453457 node_paths=PackedStringArray("player") instance=ExtResource("3_ijhft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71179605, 1.9962568, 0.43068147)
+player = NodePath("..")
+default = 80.0
+fov_change_speed = 3
 
 [node name="blockbench_export" parent="." unique_id=1458451363 instance=ExtResource("4_ijhft")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
