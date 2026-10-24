@@ -56,6 +56,12 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Main Menu"
 
+[node name="QuitButton" type="Button" parent="Control/CenterContainer/VBoxContainer" unique_id=78483837]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit"
+
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

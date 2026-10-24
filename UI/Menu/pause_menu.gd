@@ -27,3 +27,6 @@ func unpause_game():
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	queue_free()
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()

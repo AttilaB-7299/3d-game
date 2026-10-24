@@ -55,25 +55,11 @@ func _physics_process(delta: float) -> void:
 	handleAttack()
 	handleMovement()
 	handleJump()
-	# if Input.is_action_just_pressed("quit"):
-	# 	get_tree().quit()
 	if Input.is_action_just_pressed("pause game"):
 		get_tree().current_scene.add_child(pause_menu.instantiate())
 		get_tree().paused = true
-		# get_tree().reload_current_scene()
-	# Get the input direction and handle the movement/deceleration.
-	#var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")
-	#var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	#if direction:
-		#moving = true
-		#if (!hitting && !running):
-			#blockbench_export._playAnim("walk")
-		#velocity.x = direction.x * SPEED * sprintSpeed
-		#velocity.z = direction.z * SPEED * sprintSpeed
-	#else:
-		#moving = false
-		#velocity.x = move_toward(velocity.x, 0, SPEED)
-		#velocity.z = move_toward(velocity.z, 0, SPEED)
+	if Input.is_action_just_pressed("reload scene"):
+		get_tree().reload_current_scene()
 	
 	move_and_slide()
 
