@@ -1,6 +1,6 @@
 extends State
 
-@export var gravity_multiplier := 1.5
+@export var gravity_multiplier := 1.0
 @export var move_speed := 5.0
 
 func _enter() -> void:
@@ -22,4 +22,3 @@ func _state_physics_process(_delta: float) -> void:
 
 func _exit() -> void:
 	print_debug("FALL STATE EXITED")
-

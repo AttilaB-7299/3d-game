@@ -1,14 +1,16 @@
 extends State
 
-@export var blockbench_export: Node3D 
 
+@onready var blockbench_export: Node3D = $"../../blockbench_export"
 @export var move_speed := 8.75
 
 func _enter() -> void:
-	# blockbench_export._animBlend("run", 0.2)
+	# ual_2_standard._animBlend("run", 0.2)
 	print_debug("RUN STATE ENTERED")
 
 func _state_physics_process(_delta: float) -> void:
+	if Input.is_action_just_pressed("attack"):
+		state_machine.change_state("attack")
 	blockbench_export._animBlend("run", 0.2)
 
 	parent._handle_horazontal_movement(move_speed)

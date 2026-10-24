@@ -1,6 +1,6 @@
 extends State
 
-@export var blockbench_export: Node3D 
+@onready var blockbench_export: Node3D = $"../../blockbench_export"
 
 func _enter() -> void:
 	blockbench_export._animBlend("default", 0.2)
@@ -28,5 +28,3 @@ func handle_possible_state_change():
 
 	if Input.is_action_just_pressed("attack"):
 		state_machine.change_state("attack")
-
-

@@ -1,6 +1,6 @@
 extends State
 
-@export var blockbench_export: Node3D 
+@onready var blockbench_export: Node3D = $"../../blockbench_export"
 @export var attack_box: Killzone
 
 var attack_count: int
@@ -27,7 +27,9 @@ func _enter() -> void:
 
 func _exit() -> void:
 	print_debug("ATTACK STATE EXITED")
-
+func _state_physics_process(_delta: float) -> void:
+	#walk and punch
+	parent._handle_horazontal_movement(5.0)
 
 func handle_possible_state_change():
 	if !parent.is_on_floor():

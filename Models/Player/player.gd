@@ -77,4 +77,3 @@ func _handle_horazontal_movement(move_speed: float):
 func _handle_gravity(delta: float, grav_mult):
 	velocity += get_gravity() * delta * grav_mult
 	pass
-

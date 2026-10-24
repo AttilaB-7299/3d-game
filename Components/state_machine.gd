@@ -30,4 +30,3 @@ func _setup_states() -> void:
 	for child: State in get_children():
 		child.parent = parent
 		child.state_machine = self
-

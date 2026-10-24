@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://qvwhkc31cgig" path="res://Player/States/attack_state.gd" id="12_0x8ie"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
-size = Vector3(1, 2.5044632, 1.6826134)
+size = Vector3(1, 2.5044632, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2k3eg"]
 size = Vector3(0.7119873, 0.66467285, 0.741272)
@@ -27,7 +27,7 @@ script = ExtResource("1_s0eop")
 [node name="attackBox" parent="." unique_id=388224691 instance=ExtResource("2_xd66b")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="attackBox" unique_id=517869495]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1538256, 0, 1.3418617, -1.1168976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.1538256, 0, 1.3418617, -1.8769147)
 shape = SubResource("BoxShape3D_8qdug")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=192644074]
@@ -49,21 +49,18 @@ parent = NodePath("..")
 initial_state = NodePath("IdleState")
 metadata/_custom_type_script = "uid://dqvnmyegmjr7a"
 
-[node name="IdleState" type="Node" parent="StateMachine" unique_id=1284595308 node_paths=PackedStringArray("blockbench_export")]
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=1284595308]
 script = ExtResource("7_nqd48")
-blockbench_export = NodePath("../../blockbench_export")
 state_name = "idle"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
-[node name="WalkState" type="Node" parent="StateMachine" unique_id=1890211970 node_paths=PackedStringArray("blockbench_export")]
+[node name="WalkState" type="Node" parent="StateMachine" unique_id=1890211970]
 script = ExtResource("8_8nb7r")
-blockbench_export = NodePath("../../blockbench_export")
 state_name = "walk"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
-[node name="RunState" type="Node" parent="StateMachine" unique_id=1833045101 node_paths=PackedStringArray("blockbench_export")]
+[node name="RunState" type="Node" parent="StateMachine" unique_id=1833045101]
 script = ExtResource("9_0x8ie")
-blockbench_export = NodePath("../../blockbench_export")
 state_name = "run"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
@@ -72,15 +69,13 @@ script = ExtResource("10_wqc1t")
 state_name = "fall"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
-[node name="JumpState" type="Node" parent="StateMachine" unique_id=845321404 node_paths=PackedStringArray("blockbench_export")]
+[node name="JumpState" type="Node" parent="StateMachine" unique_id=845321404]
 script = ExtResource("11_gjv6x")
-blockbench_export = NodePath("../../blockbench_export")
 state_name = "jump"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
-[node name="AttackState" type="Node" parent="StateMachine" unique_id=118654440 node_paths=PackedStringArray("blockbench_export", "attack_box")]
+[node name="AttackState" type="Node" parent="StateMachine" unique_id=118654440 node_paths=PackedStringArray("attack_box")]
 script = ExtResource("12_0x8ie")
-blockbench_export = NodePath("../../blockbench_export")
 attack_box = NodePath("../../attackBox")
 state_name = "attack"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"

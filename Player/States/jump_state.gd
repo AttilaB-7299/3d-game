@@ -2,7 +2,7 @@ extends State
 
 @export var jumps := 3
 @export var jump_velocity := 6.5
-@export var gravity_multiplier := 1.5
+@export var gravity_multiplier := 1.0
 @export var move_speed := 5.0
 
 var jumps_left

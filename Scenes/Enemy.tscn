@@ -5,7 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bgggs4lcid3e7" path="res://Models/robotmodel.gltf" id="3_xeo28"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2rcc8"]
-size = Vector3(2.0222657, 2.9, 1)
+size = Vector3(2.4, 2.9, 1.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xeo28"]
+size = Vector3(2, 2.9, 1)
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1821107149]
 collision_layer = 3
@@ -16,7 +19,7 @@ script = ExtResource("1_3homo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone" unique_id=500040125]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08886713, 0.45000005, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099999964, 0.45000005, -5.9604645e-08)
 shape = SubResource("BoxShape3D_2rcc8")
 
 [node name="blockbench_export" parent="." unique_id=901718619 instance=ExtResource("3_xeo28")]
@@ -24,4 +27,4 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=939069037]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08886713, 1.45, 0)
-shape = SubResource("BoxShape3D_2rcc8")
+shape = SubResource("BoxShape3D_xeo28")
