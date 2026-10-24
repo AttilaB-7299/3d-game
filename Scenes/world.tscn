@@ -51,4 +51,6 @@ player = NodePath("../Player")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=396409494]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.471466, 0, 1.3755798)
+use_collision = true
+collision_layer = 3
 size = Vector3(42.03058, 1, 32.916077)
