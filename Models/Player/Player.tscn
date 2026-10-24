@@ -5,6 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://ccptbgtlxn2n" path="res://Models/Player/player_camera.tscn" id="3_ijhft"]
 [ext_resource type="PackedScene" uid="uid://b0dlxy378sw7k" path="res://Models/Player/Knight.gltf" id="4_ijhft"]
 [ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="5_5m70n"]
+[ext_resource type="Script" uid="uid://dqvnmyegmjr7a" path="res://Components/state_machine.gd" id="6_a2f3d"]
+[ext_resource type="Script" uid="uid://dxo7ihxvvq072" path="res://Player/States/idle_state.gd" id="7_nqd48"]
+[ext_resource type="Script" uid="uid://btq6hpluy6hqf" path="res://Player/States/walk_state.gd" id="8_8nb7r"]
+[ext_resource type="Script" uid="uid://6t6yy005iyyr" path="res://Player/States/run_state.gd" id="9_0x8ie"]
+[ext_resource type="Script" uid="uid://5may74y508w0" path="res://Player/States/fall_state.gd" id="10_wqc1t"]
+[ext_resource type="Script" uid="uid://difukynyvvwmv" path="res://Player/States/jump_state.gd" id="11_gjv6x"]
+[ext_resource type="Script" uid="uid://qvwhkc31cgig" path="res://Player/States/attack_state.gd" id="12_0x8ie"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
 size = Vector3(1, 2.5044632, 1.6826134)
@@ -35,3 +42,45 @@ fov_change_speed = 3
 [node name="blockbench_export" parent="." unique_id=1458451363 instance=ExtResource("4_ijhft")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 script = ExtResource("5_5m70n")
+
+[node name="StateMachine" type="Node" parent="." unique_id=184899213 node_paths=PackedStringArray("parent", "initial_state")]
+script = ExtResource("6_a2f3d")
+parent = NodePath("..")
+initial_state = NodePath("IdleState")
+metadata/_custom_type_script = "uid://dqvnmyegmjr7a"
+
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=1284595308 node_paths=PackedStringArray("blockbench_export")]
+script = ExtResource("7_nqd48")
+blockbench_export = NodePath("../../blockbench_export")
+state_name = "idle"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
+[node name="WalkState" type="Node" parent="StateMachine" unique_id=1890211970 node_paths=PackedStringArray("blockbench_export")]
+script = ExtResource("8_8nb7r")
+blockbench_export = NodePath("../../blockbench_export")
+state_name = "walk"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
+[node name="RunState" type="Node" parent="StateMachine" unique_id=1833045101 node_paths=PackedStringArray("blockbench_export")]
+script = ExtResource("9_0x8ie")
+blockbench_export = NodePath("../../blockbench_export")
+state_name = "run"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
+[node name="FallState" type="Node" parent="StateMachine" unique_id=1407124419]
+script = ExtResource("10_wqc1t")
+state_name = "fall"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
+[node name="JumpState" type="Node" parent="StateMachine" unique_id=845321404 node_paths=PackedStringArray("blockbench_export")]
+script = ExtResource("11_gjv6x")
+blockbench_export = NodePath("../../blockbench_export")
+state_name = "jump"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
+[node name="AttackState" type="Node" parent="StateMachine" unique_id=118654440 node_paths=PackedStringArray("blockbench_export", "attack_box")]
+script = ExtResource("12_0x8ie")
+blockbench_export = NodePath("../../blockbench_export")
+attack_box = NodePath("../../attackBox")
+state_name = "attack"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"

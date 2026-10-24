@@ -14,7 +14,9 @@ func _ready() -> void:
 	camera.fov = default
 
 func _process(_delta: float) -> void:
-	if (player.running):
+	if (player.state_machine.current_state.state_name == "run"):
 		camera.fov = lerp(camera.fov, running, _delta * fov_change_speed)
+	# if (player.running):
+	# 	camera.fov = lerp(camera.fov, running, _delta * fov_change_speed)
 	else:
 		camera.fov = lerp(camera.fov, default, _delta * fov_change_speed)
