@@ -28,9 +28,8 @@ transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.011108398, 1.17206
 shape = SubResource("BoxShape3D_2k3eg")
 
 [node name="PlayerCamera" parent="." unique_id=1482453457 node_paths=PackedStringArray("player") instance=ExtResource("3_ijhft")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71179605, 1.9962568, 0.43068147)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022306621, 1.9962568, 0.43068147)
 player = NodePath("..")
-default = 80.0
 fov_change_speed = 3
 
 [node name="blockbench_export" parent="." unique_id=1458451363 instance=ExtResource("4_ijhft")]

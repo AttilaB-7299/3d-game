@@ -2,7 +2,7 @@ extends CharacterBody3D
 class_name Player
 signal took_damage
 const SPEED = 5.0
-const JUMP_VELOCITY = 5.5
+const JUMP_VELOCITY = 6.5
 const GRAV_MULTIPLIER = 1.5
 var walking = false
 var hitting = false
