@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://5may74y508w0" path="res://Player/States/fall_state.gd" id="10_wqc1t"]
 [ext_resource type="Script" uid="uid://difukynyvvwmv" path="res://Player/States/jump_state.gd" id="11_gjv6x"]
 [ext_resource type="Script" uid="uid://qvwhkc31cgig" path="res://Player/States/attack_state.gd" id="12_0x8ie"]
+[ext_resource type="PackedScene" uid="uid://bwbk4w7qe7t1t" path="res://UI/HotBar/hot_bar.tscn" id="13_wqc1t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
 size = Vector3(1, 2.5044632, 3)
@@ -79,3 +80,5 @@ script = ExtResource("12_0x8ie")
 attack_box = NodePath("../../attackBox")
 state_name = "attack"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
+[node name="HotBar" parent="." unique_id=1252577093 instance=ExtResource("13_wqc1t")]
