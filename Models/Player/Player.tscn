@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Models/Player/player.gd" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_xd66b"]
 [ext_resource type="PackedScene" uid="uid://ccptbgtlxn2n" path="res://Models/Player/player_camera.tscn" id="3_ijhft"]
-[ext_resource type="PackedScene" uid="uid://b0dlxy378sw7k" path="res://Models/Player/Knight.gltf" id="4_ijhft"]
 [ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="5_5m70n"]
 [ext_resource type="Script" uid="uid://dqvnmyegmjr7a" path="res://Components/state_machine.gd" id="6_a2f3d"]
 [ext_resource type="Script" uid="uid://dxo7ihxvvq072" path="res://Player/States/idle_state.gd" id="7_nqd48"]
 [ext_resource type="Script" uid="uid://btq6hpluy6hqf" path="res://Player/States/walk_state.gd" id="8_8nb7r"]
 [ext_resource type="Script" uid="uid://6t6yy005iyyr" path="res://Player/States/run_state.gd" id="9_0x8ie"]
 [ext_resource type="Script" uid="uid://5may74y508w0" path="res://Player/States/fall_state.gd" id="10_wqc1t"]
+[ext_resource type="PackedScene" uid="uid://p8jj1fgg7jym" path="res://Models/Player/Knight/KnightHelmet.gltf" id="11_6jvbr"]
 [ext_resource type="Script" uid="uid://difukynyvvwmv" path="res://Player/States/jump_state.gd" id="11_gjv6x"]
 [ext_resource type="Script" uid="uid://qvwhkc31cgig" path="res://Player/States/attack_state.gd" id="12_0x8ie"]
 [ext_resource type="PackedScene" uid="uid://bwbk4w7qe7t1t" path="res://UI/HotBar/hot_bar.tscn" id="13_wqc1t"]
@@ -39,10 +39,6 @@ shape = SubResource("BoxShape3D_2k3eg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022306621, 1.9962568, 0.43068147)
 player = NodePath("..")
 fov_change_speed = 3
-
-[node name="blockbench_export" parent="." unique_id=847953359 instance=ExtResource("4_ijhft")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-script = ExtResource("5_5m70n")
 
 [node name="StateMachine" type="Node" parent="." unique_id=184899213 node_paths=PackedStringArray("parent", "initial_state")]
 script = ExtResource("6_a2f3d")
