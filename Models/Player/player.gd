@@ -1,6 +1,5 @@
 extends CharacterBody3D
 class_name Player
-
 signal took_damage
 
 var attack_count = 0
@@ -14,7 +13,9 @@ var MAX_HEALTH = 5
 @onready var state_machine: StateMachine = $StateMachine
 
 const pause_menu = preload("res://UI/Menu/pause_menu.tscn")
-
+func checkPickUp():
+	pass
+	#if 
 func changeMaxHealth(change: int):
 	MAX_HEALTH += change
 

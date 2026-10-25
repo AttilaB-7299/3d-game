@@ -21,7 +21,7 @@ size = Vector3(0.7119873, 0.66467285, 0.741272)
 
 [node name="Player" type="CharacterBody3D" unique_id=153155451 groups=["Player"]]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 7
 script = ExtResource("1_s0eop")
 
 [node name="attackBox" parent="." unique_id=388224691 instance=ExtResource("2_xd66b")]

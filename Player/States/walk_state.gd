@@ -4,8 +4,8 @@ extends State
 @export var move_speed := 5.0
 
 func _enter() -> void:
-	# ual_2_standard._animBlend("walk", 0.2)
-	print_debug("WALK STATE ENTERED")
+	blockbench_export._animBlend("walk", 0.2)
+	#print_debug("WALK STATE ENTERED")
 
 func _state_physics_process(_delta: float) -> void:
 	blockbench_export._animBlend("walk", 0.2)
@@ -14,7 +14,8 @@ func _state_physics_process(_delta: float) -> void:
 	handle_possible_state_change()
 
 func _exit() -> void:
-	print_debug("WALK STATE EXITED")
+	pass
+	#print_debug("WALK STATE EXITED")
 
 func handle_possible_state_change():
 	if !Input.get_vector("move left", "move right", "move forward", "move back"):

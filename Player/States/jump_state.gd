@@ -10,7 +10,7 @@ var can_jump := false
 
 func _enter() -> void:
 	jumps_left = jumps
-	print_debug("JUMP STATE ENTERED")
+	#print_debug("JUMP STATE ENTERED")
 	if jumps_left && Input.is_action_pressed("jump"):
 		handle_jumping()
 
@@ -35,7 +35,8 @@ func _state_physics_process(_delta: float) -> void:
 		handle_jumping()
 
 func _exit() -> void:
-	print_debug("JUMP STATE EXITED")
+	pass
+	#print_debug("JUMP STATE EXITED")
 
 
 func handle_jumping() -> void:

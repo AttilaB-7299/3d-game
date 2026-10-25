@@ -10,12 +10,12 @@ func _getOwner():
 var can_hurt := true
 func _hitboxDisable():
 	monitoring = false
-	monitoring = false
+	monitorable = false
 	set_deferred("monitoring", false)
 	set_deferred("monitorable", false)  
 func _hitboxEnable():
 	monitorable = true
-	monitoring = true
+	monitorable = true
 	set_deferred("monitoring", true)  
 	set_deferred("monitorable", true)  
 func _physics_process(_delta: float) -> void:

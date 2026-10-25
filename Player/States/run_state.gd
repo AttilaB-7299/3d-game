@@ -2,11 +2,11 @@ extends State
 
 
 @onready var blockbench_export: Node3D = $"../../blockbench_export"
-@export var move_speed := 8.75
+@export var move_speed := 10.0
 
 func _enter() -> void:
-	# ual_2_standard._animBlend("run", 0.2)
-	print_debug("RUN STATE ENTERED")
+	blockbench_export._animBlend("run", 0.2)
+	#print_debug("RUN STATE ENTERED")
 
 func _state_physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
@@ -18,7 +18,8 @@ func _state_physics_process(_delta: float) -> void:
 	handle_possible_state_change()
 
 func _exit() -> void:
-	print_debug("RUN STATE EXITED")
+	pass
+	#print_debug("RUN STATE EXITED")
 
 
 func handle_possible_state_change():

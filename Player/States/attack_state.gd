@@ -5,11 +5,10 @@ extends State
 
 var attack_count: int
 
-
 func _enter() -> void:
 	attack_count = 1
 	blockbench_export._animBlend("attack", 0.2)
-	print_debug("ATTACK STATE ENTERED")
+	#print_debug("ATTACK STATE ENTERED")
 
 	await get_tree().create_timer(0.5).timeout
 	print("ENABLE ATTACK")

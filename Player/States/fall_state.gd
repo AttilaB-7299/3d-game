@@ -4,7 +4,8 @@ extends State
 @export var move_speed := 5.0
 
 func _enter() -> void:
-	print_debug("FALL STATE ENTERED")
+	pass
+	#print_debug("FALL STATE ENTERED")
 
 func _state_physics_process(_delta: float) -> void:
 	parent._handle_horazontal_movement(move_speed)
@@ -21,4 +22,5 @@ func _state_physics_process(_delta: float) -> void:
 		state_machine.change_state("idle")
 
 func _exit() -> void:
-	print_debug("FALL STATE EXITED")
+	pass
+	#print_debug("FALL STATE EXITED")
