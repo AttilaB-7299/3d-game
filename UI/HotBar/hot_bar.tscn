@@ -12,7 +12,7 @@ border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Theme" id="Theme_vm0tb"]
 HBoxContainer/constants/separation = 8
-MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_bottom = 30
 Panel/styles/panel = SubResource("StyleBoxFlat_vm0tb")
 
 [node name="HotBar" type="Control" unique_id=1252577093]
