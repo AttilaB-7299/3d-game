@@ -1,14 +1,12 @@
 extends Node
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var player: Player = $"../.."
 
 func _stopAnim() -> void:
 	if animation_player:
 		animation_player.stop()
 
 func _animBlend(anim_name: String, blendTime: float) -> void:
-	# Ensure animation_player is valid before calling methods on it
 	if not animation_player:
 		animation_player = get_node_or_null("AnimationPlayer") as AnimationPlayer
 		if not animation_player:
@@ -23,8 +21,6 @@ func _animBlend(anim_name: String, blendTime: float) -> void:
 func _playAnim(anim_name: String) -> void:
 	if not animation_player:
 		return
-		
-	var user = player as Player
 	if anim_name == animation_player.current_animation:
 		pass
 	elif anim_name == "attack":

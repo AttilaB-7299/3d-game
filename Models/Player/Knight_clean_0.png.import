@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c870q5bi1w3rw"
-path.s3tc="res://.godot/imported/character_0.png-b0cde3fbe5e80f44f7997ae3a8ec4fca.s3tc.ctex"
+uid="uid://g1fr8dpqf0jw"
+path.s3tc="res://.godot/imported/Knight_clean_0.png-3ec122a636efdd8b9b6939e2634c35d3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "67a61f94fbcf9c9612a30713eae4751d"
+"md5": "9cd51fa8d217a2512425760bb0e1dd30"
 }
 
 [deps]
 
-source_file="res://Models/Player/character_0.png"
-dest_files=["res://.godot/imported/character_0.png-b0cde3fbe5e80f44f7997ae3a8ec4fca.s3tc.ctex"]
+source_file="res://Models/Player/Knight_clean_0.png"
+dest_files=["res://.godot/imported/Knight_clean_0.png-3ec122a636efdd8b9b6939e2634c35d3.s3tc.ctex"]
 
 [params]
 

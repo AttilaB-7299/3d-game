@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dqlqlt2uwu2po"]
+
+[ext_resource type="PackedScene" uid="uid://dh2f5maxhetqo" path="res://Models/Player/Knight_clean.gltf" id="1_gb5m4"]
+
+[node name="blockbench_export" unique_id=470687339 instance=ExtResource("1_gb5m4")]
+
+[node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(695064023) index="0" unique_id=1625271650]
+bones/0/position = Vector3(0.00096, -0.14545, -0.01626)
+bones/1/rotation = Quaternion(0.5690319, 0, 0, 0.8223156)
+bones/3/rotation = Quaternion(-0.39080343, 0, 0, 0.9204742)
+bones/4/rotation = Quaternion(-0.04467095, 0, 0, 0.99900174)
+bones/5/rotation = Quaternion(-0.07993343, 0, 0, 0.9968002)
+bones/7/rotation = Quaternion(-0.6742621, 0, 0, 0.7384922)
+bones/8/rotation = Quaternion(-0.14041708, 0, 0, 0.9900925)
+bones/9/rotation = Quaternion(-0.15676814, -0.14365181, 0.019490652, 0.9769382)
+bones/12/rotation = Quaternion(0, 0.09470886, 0, 0.99550503)
+bones/13/rotation = Quaternion(0.35352135, -0.109747484, 0.041027315, 0.9280598)
+bones/15/rotation = Quaternion(0.71554744, -0.30237725, -0.037229896, 0.6286285)
+bones/17/rotation = Quaternion(0.09364555, 0.2543693, -0.084197976, 0.9588731)
+bones/19/rotation = Quaternion(0.69207376, 0.28518325, 0.0032324397, 0.6630943)
+bones/21/rotation = Quaternion(0, 0.15212339, 0, 0.98836154)

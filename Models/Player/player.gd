@@ -4,9 +4,16 @@ signal took_damage
 
 var attack_count = 0
 var MAX_HEALTH = 5
+@onready var blockbench_export: Node3D = $blockbench_export
+
+#@onready var blockbench_export_2: Node3D = $"KnightModel/blockbench_export2"
+#@onready var blockbench_export_3: Node3D = $"KnightModel/blockbench_export3"
+#@onready var blockbench_export_4: Node3D = $"KnightModel/blockbench_export4"
+#@onready var blockbench_export_5: Node3D = $"KnightModel/blockbench_export5"
+#@onready var blockbench_export_6: Node3D = $"KnightModel/blockbench_export6"
+#@onready var blockbench_export_7: Node3D = $"KnightModel/blockbench_export7"
 
 @onready var pivot: Node3D = $PlayerCamera
-@onready var blockbench_export: Node3D = $blockbench_export
 @onready var attack_box: Area3D = $attackBox
 @export var health = MAX_HEALTH
 @export var sens = 0.5

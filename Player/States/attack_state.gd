@@ -1,28 +1,31 @@
 extends State
 #NOTE EXPORT 5 IS RIGHT ARM
-@onready var blockbench_export_2: Node3D = $"../../KnightModel/blockbench_export2"
-@onready var blockbench_export_3: Node3D = $"../../KnightModel/blockbench_export3"
-@onready var blockbench_export_4: Node3D = $"../../KnightModel/blockbench_export4"
-@onready var blockbench_export_5: Node3D = $"../../KnightModel/blockbench_export5"
-@onready var blockbench_export_6: Node3D = $"../../KnightModel/blockbench_export6"
-@onready var blockbench_export_7: Node3D = $"../../KnightModel/blockbench_export7"
+@onready var blockbench_export: Node3D = $"../../blockbench_export"
+
+#@onready var blockbench_export_2: Node3D = $"../../KnightModel/blockbench_export2"
+#@onready var blockbench_export_3: Node3D = $"../../KnightModel/blockbench_export3"
+#@onready var blockbench_export_4: Node3D = $"../../KnightModel/blockbench_export4"
+#@onready var blockbench_export_5: Node3D = $"../../KnightModel/blockbench_export5"
+#@onready var blockbench_export_6: Node3D = $"../../KnightModel/blockbench_export6"
+#@onready var blockbench_export_7: Node3D = $"../../KnightModel/blockbench_export7"
 @export var attack_box: Killzone
 
 var attack_count: int
 
 func _enter() -> void:
 	attack_count = 1
-	for i in range(2, 8):
-		var node_path = "../../KnightModel/blockbench_export%s" % i
-		var export_node = get_node_or_null(node_path)
-		if export_node:
-			if export_node == blockbench_export_5:
-				export_node._animBlend("hit")
-			else:
-				if (state_machine.current_state.state_name == "walk"):
-					export_node._animBlend("run", 0.2)	
-				if (state_machine.current_state.state_name == "run"):
-					export_node._animBlend("run", 0.2)	
+	blockbench_export._animBlend("hit", 0.2)
+	#for i in range(2, 8):
+		#var node_path = "../../KnightModel/blockbench_export%s" % i
+		#var export_node = get_node_or_null(node_path)
+		#if export_node:
+			#if export_node == blockbench_export_5:
+				#export_node._animBlend("hit")
+			#else:
+				#if (state_machine.current_state.state_name == "walk"):
+					#export_node._animBlend("run", 0.2)	
+				#if (state_machine.current_state.state_name == "run"):
+					#export_node._animBlend("run", 0.2)	
 		#print_debug("ATTACK STATE ENTERED")
 
 	await get_tree().create_timer(0.5).timeout
