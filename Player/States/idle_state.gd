@@ -2,15 +2,15 @@ extends State
 
 @onready var blockbench_export: Node3D = $"../../blockbench_export"
 
-func _enter() -> void:
-	blockbench_export._animBlend("default", 0.2)
+# func _enter() -> void:
+# 	pass
 
 func _state_physics_process(_delta: float) -> void:
+	blockbench_export._animBlend("default", 0.2)
 	handle_possible_state_change()
 
 func _exit() -> void:
 	pass
-	#print_debug("IDLE STATE EXITED")
 
 
 func handle_possible_state_change():
