@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://8a0lwxapeqbc"]
 
-[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Models/Player/Player.tscn" id="1_a02cp"]
-[ext_resource type="Script" uid="uid://dyjqck5yorbjw" path="res://Scripts/world.gd" id="1_o06y3"]
-[ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Scenes/killzone.tscn" id="2_go701"]
-[ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Scenes/Enemy.tscn" id="6_5ukr8"]
-[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://Scenes/HealthBar.tscn" id="8_k7acu"]
+[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="1_a02cp"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="1_o06y3"]
+[ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Test/killzone.tscn" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Enemy/Enemy.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://UI/HealthBar/HealthBar.tscn" id="8_k7acu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5a7ea"]
 size = Vector3(9.649048, 5.4746094, 46.419464)

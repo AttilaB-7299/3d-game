@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://doc43ybtr6fbk"
-path="res://.godot/imported/KnightRightLeg.gltf-fbb4f94530a9cf599687243a6bd12f39.scn"
+uid="uid://bgggs4lcid3e7"
+path="res://.godot/imported/robotmodel.gltf-52c43366c73d65d8da48b63d7ca031b4.scn"
 
 [deps]
 
-source_file="res://Models/Player/Knight/KnightRightLeg.gltf"
-dest_files=["res://.godot/imported/KnightRightLeg.gltf-fbb4f94530a9cf599687243a6bd12f39.scn"]
+source_file="res://Enemy/robotmodel.gltf"
+dest_files=["res://.godot/imported/robotmodel.gltf-52c43366c73d65d8da48b63d7ca031b4.scn"]
 
 [params]
 

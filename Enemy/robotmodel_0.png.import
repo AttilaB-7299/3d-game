@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxorhod40ufpa"
-path.s3tc="res://.godot/imported/KnightTorso_0.png-c98d57a2703bc2c45038b47404662a4d.s3tc.ctex"
+uid="uid://bnyq562w1nebi"
+path.s3tc="res://.godot/imported/robotmodel_0.png-11db6b03e17cd44c1e64ad73272b54e8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3e3f83c912fa0e5f249cc5fbb48c2c73"
+"md5": "f66c7d286f51f84d5bbd2db4379c4889"
 }
 
 [deps]
 
-source_file="res://Models/Player/Knight/KnightTorso_0.png"
-dest_files=["res://.godot/imported/KnightTorso_0.png-c98d57a2703bc2c45038b47404662a4d.s3tc.ctex"]
+source_file="res://Enemy/robotmodel_0.png"
+dest_files=["res://.godot/imported/robotmodel_0.png-11db6b03e17cd44c1e64ad73272b54e8.s3tc.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dqlqlt2uwu2po"]
 
-[ext_resource type="PackedScene" uid="uid://dh2f5maxhetqo" path="res://Models/Player/Knight_clean.gltf" id="1_gb5m4"]
+[ext_resource type="PackedScene" uid="uid://dh2f5maxhetqo" path="res://Player/Knight_clean.gltf" id="1_gb5m4"]
 
 [node name="blockbench_export" unique_id=470687339 instance=ExtResource("1_gb5m4")]
 
-[node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(695064023) index="0" unique_id=1625271650]
+[node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(592354659) index="0" unique_id=707964118]
 bones/0/position = Vector3(0.00096, -0.14545, -0.01626)
 bones/1/rotation = Quaternion(0.5690319, 0, 0, 0.8223156)
 bones/3/rotation = Quaternion(-0.39080343, 0, 0, 0.9204742)

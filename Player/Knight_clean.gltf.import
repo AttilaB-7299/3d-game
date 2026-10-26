@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dh2f5maxhetqo"
-path="res://.godot/imported/Knight_clean.gltf-d339aecb7754c6e3f019cf21d3531045.scn"
+path="res://.godot/imported/Knight_clean.gltf-598147d3019644c93558fff2a388a94f.scn"
 
 [deps]
 
-source_file="res://Models/Player/Knight_clean.gltf"
-dest_files=["res://.godot/imported/Knight_clean.gltf-d339aecb7754c6e3f019cf21d3531045.scn"]
+source_file="res://Player/Knight_clean.gltf"
+dest_files=["res://.godot/imported/Knight_clean.gltf-598147d3019644c93558fff2a388a94f.scn"]
 
 [params]
 

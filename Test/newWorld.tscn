@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://csbnxf0vhij6i"]
 
 [ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_0exai"]
-[ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Scenes/Enemy.tscn" id="2_fgstp"]
-[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Models/Player/Player.tscn" id="3_d1trg"]
-[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://Scenes/HealthBar.tscn" id="4_4g8mf"]
+[ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Enemy/Enemy.tscn" id="2_fgstp"]
+[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="3_d1trg"]
+[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://UI/HealthBar/HealthBar.tscn" id="4_4g8mf"]
 [ext_resource type="PackedScene" uid="uid://c0sudd1iptsfc" path="res://UI/Items/testItem.tscn" id="5_d1trg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4x5i"]

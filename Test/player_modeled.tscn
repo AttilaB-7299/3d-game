@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ww0wg868dvjy"]
 
-[ext_resource type="PackedScene" uid="uid://dq43j5tm1u1wb" path="res://Models/character.gltf" id="1_cvr5i"]
-[ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://Scripts/player_modeled.gd" id="2_bmsl7"]
+[ext_resource type="PackedScene" uid="uid://bpqp0tjps22a" path="res://Models/character.gltf" id="1_cvr5i"]
+[ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://UI/Items/player_modeled.gd" id="2_bmsl7"]
 
 [sub_resource type="GDScript" id="GDScript_wfxnc"]
 
