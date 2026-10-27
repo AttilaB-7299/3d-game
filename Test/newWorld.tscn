@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_0exai"]
 [ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Enemy/Enemy.tscn" id="2_fgstp"]
 [ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="3_d1trg"]
-[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://UI/HealthBar/HealthBar.tscn" id="4_4g8mf"]
 [ext_resource type="PackedScene" uid="uid://c0sudd1iptsfc" path="res://UI/Items/testItem.tscn" id="5_d1trg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4x5i"]
@@ -127,9 +126,6 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.7, 0)
 
 [node name="Player" parent="." unique_id=153155451 instance=ExtResource("3_d1trg")]
-
-[node name="HealthBar" parent="." unique_id=317919888 node_paths=PackedStringArray("player") instance=ExtResource("4_4g8mf")]
-player = NodePath("../Player")
 
 [node name="LowPolyTerrainManager_Collisions" type="Node3D" parent="." unique_id=491210976]
 

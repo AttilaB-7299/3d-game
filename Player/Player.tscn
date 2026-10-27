@@ -9,10 +9,12 @@
 [ext_resource type="Script" uid="uid://6t6yy005iyyr" path="res://Player/States/run_state.gd" id="9_0x8ie"]
 [ext_resource type="Script" uid="uid://5may74y508w0" path="res://Player/States/fall_state.gd" id="10_wqc1t"]
 [ext_resource type="PackedScene" uid="uid://dqlqlt2uwu2po" path="res://Player/Knight.tscn" id="11_8nb7r"]
+[ext_resource type="Script" uid="uid://bsasoelbbic85" path="res://Player/inventory_state.gd" id="11_dm7nj"]
 [ext_resource type="Script" uid="uid://difukynyvvwmv" path="res://Player/States/jump_state.gd" id="11_gjv6x"]
 [ext_resource type="Script" uid="uid://qvwhkc31cgig" path="res://Player/States/attack_state.gd" id="12_0x8ie"]
 [ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://UI/Items/player_modeled.gd" id="12_wqc1t"]
 [ext_resource type="PackedScene" uid="uid://bwbk4w7qe7t1t" path="res://UI/Inventory/HotBar/hot_bar.tscn" id="13_wqc1t"]
+[ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://UI/HealthBar/HealthBar.tscn" id="15_3mea3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
 size = Vector3(1, 2.5044632, 3)
@@ -77,8 +79,16 @@ attack_box = NodePath("../../attackBox")
 state_name = "attack"
 metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
+[node name="InventoryState" type="Node" parent="StateMachine" unique_id=796315722]
+script = ExtResource("11_dm7nj")
+state_name = "inventory"
+metadata/_custom_type_script = "uid://dysrjb6qly38t"
+
 [node name="HotBar" parent="." unique_id=1252577093 instance=ExtResource("13_wqc1t")]
 
 [node name="blockbench_export" parent="." unique_id=470687339 instance=ExtResource("11_8nb7r")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
 script = ExtResource("12_wqc1t")
+
+[node name="HealthBar" parent="." unique_id=317919888 node_paths=PackedStringArray("player") instance=ExtResource("15_3mea3")]
+player = NodePath("..")

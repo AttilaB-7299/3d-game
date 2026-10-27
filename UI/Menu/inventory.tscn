@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://doeey3ws57yi"]
+
+[ext_resource type="Script" uid="uid://c0n0pg5nsq4iv" path="res://UI/Menu/inventory.gd" id="1_koa4h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vm0tb"]
+bg_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="Theme" id="Theme_vm0tb"]
+Label/font_sizes/font_size = 30
+MarginContainer/constants/margin_bottom = 40
+MarginContainer/constants/margin_left = 80
+MarginContainer/constants/margin_right = 80
+MarginContainer/constants/margin_top = 40
+Panel/styles/panel = SubResource("StyleBoxFlat_vm0tb")
+
+[node name="Inventory" type="CanvasLayer" unique_id=825862812]
+script = ExtResource("1_koa4h")
+
+[node name="Control" type="Control" parent="." unique_id=241058823]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=82900165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=1373251189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vm0tb")
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer" unique_id=1243980675]
+custom_minimum_size = Vector2(700, 550)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/Panel" unique_id=1132094416]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/Panel/MarginContainer" unique_id=1378106230]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=22162553]
+layout_mode = 2
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="InventoryItems" type="Control" parent="Control/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=381584094]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+
+[node name="HotbarItems" type="Control" parent="Control/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=674775243]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3

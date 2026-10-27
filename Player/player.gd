@@ -18,6 +18,8 @@ var MAX_HEALTH = 5
 @export var health = MAX_HEALTH
 @export var sens = 0.5
 @onready var state_machine: StateMachine = $StateMachine
+@onready var hotbar = $HotBar
+@onready var health_bar = $HealthBar
 
 const pause_menu = preload("res://UI/Menu/pause_menu.tscn")
 func checkPickUp():
@@ -54,6 +56,8 @@ func _ready() -> void:
 	attack._hitboxDisable() 
 
 func _input(event):
+	if state_machine.current_state.state_name == "inventory":
+		return
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * sens))
 		pivot.rotate_x(deg_to_rad(-event.relative.y * sens))
