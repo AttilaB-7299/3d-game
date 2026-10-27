@@ -2,20 +2,47 @@
 
 [ext_resource type="PackedScene" uid="uid://dh2f5maxhetqo" path="res://Player/Knight_clean.gltf" id="1_gb5m4"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3uxrv"]
+animation = &"hit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7g6x6"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ur8uu"]
+filter_enabled = true
+filters = ["group/Skeleton3D:Arm Right", "group/Skeleton3D:Hand Right", "group/Skeleton3D:belowElbow2"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2k3eg"]
+graph_offset = Vector2(-301.61227, 4.493251)
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_ur8uu")
+nodes/OneShot/position = Vector2(120, 93.333336)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_7g6x6")
+nodes/Animation/position = Vector2(-106.666664, 133.33333)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_3uxrv")
+"nodes/Animation 2/position" = Vector2(462.6068, 145.5959)
+node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2"]
+
 [node name="blockbench_export" unique_id=470687339 instance=ExtResource("1_gb5m4")]
 
-[node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(592354659) index="0" unique_id=707964118]
+[node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(622467517) index="0" unique_id=1428285676]
 bones/0/position = Vector3(0.00096, -0.14545, -0.01626)
-bones/1/rotation = Quaternion(0.5690319, 0, 0, 0.8223156)
-bones/3/rotation = Quaternion(-0.39080343, 0, 0, 0.9204742)
-bones/4/rotation = Quaternion(-0.04467095, 0, 0, 0.99900174)
-bones/5/rotation = Quaternion(-0.07993343, 0, 0, 0.9968002)
-bones/7/rotation = Quaternion(-0.6742621, 0, 0, 0.7384922)
-bones/8/rotation = Quaternion(-0.14041708, 0, 0, 0.9900925)
+bones/1/rotation = Quaternion(-0.21727, 0, 0, 0.97611165)
+bones/3/rotation = Quaternion(-0.3306043, 0, 0, 0.94376945)
+bones/4/rotation = Quaternion(-0.2259052, 0, 0, 0.97414935)
+bones/5/rotation = Quaternion(0.5669912, 0, 0, 0.82372385)
+bones/7/rotation = Quaternion(-0.48567247, 0, 0, 0.874141)
+bones/8/rotation = Quaternion(-0.058165282, 0, 0, 0.998307)
 bones/9/rotation = Quaternion(-0.15676814, -0.14365181, 0.019490652, 0.9769382)
-bones/12/rotation = Quaternion(0, 0.09470886, 0, 0.99550503)
-bones/13/rotation = Quaternion(0.35352135, -0.109747484, 0.041027315, 0.9280598)
+bones/12/rotation = Quaternion(0, -0.09672215, 0, 0.9953115)
+bones/13/rotation = Quaternion(-0.0821902, 0.05271285, 0.113063745, 0.98877835)
 bones/15/rotation = Quaternion(0.71554744, -0.30237725, -0.037229896, 0.6286285)
-bones/17/rotation = Quaternion(0.09364555, 0.2543693, -0.084197976, 0.9588731)
+bones/17/rotation = Quaternion(0.433146, 0.31763268, -0.075248234, 0.8401379)
 bones/19/rotation = Quaternion(0.69207376, 0.28518325, 0.0032324397, 0.6630943)
 bones/21/rotation = Quaternion(0, 0.15212339, 0, 0.98836154)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2" unique_id=444559371]
+tree_root = SubResource("AnimationNodeBlendTree_2k3eg")
+anim_player = NodePath("../AnimationPlayer")
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0

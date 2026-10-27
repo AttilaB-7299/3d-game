@@ -14,20 +14,11 @@ var attack_count: int
 
 func _enter() -> void:
 	attack_count = 1
+	#if (state_machine.current_state == state_machine.run):
+		#blockbench_export.anim_tree.set("parameters/OneShot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	#else:
+		#blockbench_export._animBlend("hit", 0.2)
 	blockbench_export._animBlend("hit", 0.2)
-	#for i in range(2, 8):
-		#var node_path = "../../KnightModel/blockbench_export%s" % i
-		#var export_node = get_node_or_null(node_path)
-		#if export_node:
-			#if export_node == blockbench_export_5:
-				#export_node._animBlend("hit")
-			#else:
-				#if (state_machine.current_state.state_name == "walk"):
-					#export_node._animBlend("run", 0.2)	
-				#if (state_machine.current_state.state_name == "run"):
-					#export_node._animBlend("run", 0.2)	
-		#print_debug("ATTACK STATE ENTERED")
-
 	await get_tree().create_timer(0.5).timeout
 	print("ENABLE ATTACK")
 	attack_box._hitboxEnable()
