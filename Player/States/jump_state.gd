@@ -40,9 +40,10 @@ func _exit() -> void:
 
 
 func handle_jumping() -> void:
-	parent.velocity.y = jump_velocity
-	jumps_left -= 1
-	if jumps_left == 0:
-		state_machine.change_state("fall")
+	if jumps_left > 0:
+		parent.velocity.y = jump_velocity
+		jumps_left -= 1
+	# if jumps_left == 0:
+	# 	state_machine.change_state("fall")
 
 	can_jump = false

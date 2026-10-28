@@ -19,7 +19,7 @@ func handle_possible_state_change():
 		state_machine.change_state("idle")
 
 	if !parent.is_on_floor():
-		state_machine.change_state("fall")
+		state_machine.change_state("jump")
 	
 	if Input.is_action_just_pressed("jump"):
 		state_machine.change_state("jump")

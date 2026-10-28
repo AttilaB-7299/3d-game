@@ -41,7 +41,7 @@ func _state_physics_process(_delta: float) -> void:
 
 func handle_possible_state_change():
 	if !parent.is_on_floor():
-		state_machine.change_state("fall")
+		state_machine.change_state("jump")
 
 	if Input.get_vector("move left", "move right", "move forward", "move back"):
 		if !Input.is_action_pressed("sprint"):

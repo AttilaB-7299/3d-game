@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://dxo7ihxvvq072" path="res://Player/States/idle_state.gd" id="7_nqd48"]
 [ext_resource type="Script" uid="uid://btq6hpluy6hqf" path="res://Player/States/walk_state.gd" id="8_8nb7r"]
 [ext_resource type="Script" uid="uid://6t6yy005iyyr" path="res://Player/States/run_state.gd" id="9_0x8ie"]
-[ext_resource type="Script" uid="uid://5may74y508w0" path="res://Player/States/fall_state.gd" id="10_wqc1t"]
 [ext_resource type="PackedScene" uid="uid://dqlqlt2uwu2po" path="res://Player/Knight.tscn" id="11_8nb7r"]
 [ext_resource type="Script" uid="uid://bsasoelbbic85" path="res://Player/inventory_state.gd" id="11_dm7nj"]
 [ext_resource type="Script" uid="uid://difukynyvvwmv" path="res://Player/States/jump_state.gd" id="11_gjv6x"]
@@ -59,10 +58,6 @@ state_name = "walk"
 [node name="RunState" type="Node" parent="StateMachine" unique_id=1833045101]
 script = ExtResource("9_0x8ie")
 state_name = "run"
-
-[node name="FallState" type="Node" parent="StateMachine" unique_id=1407124419]
-script = ExtResource("10_wqc1t")
-state_name = "fall"
 
 [node name="JumpState" type="Node" parent="StateMachine" unique_id=845321404]
 script = ExtResource("11_gjv6x")
