@@ -34,8 +34,8 @@ func maxHealth():
 func getHealth():
 	return health
 
-func damage(damage: int):
-	health -= damage
+func damage(_damage):
+	health -= _damage
 	took_damage.emit()
 
 func setHealth(newHealth: int):
@@ -63,7 +63,7 @@ func _input(event):
 		pivot.rotate_x(deg_to_rad(-event.relative.y * sens))
 		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
 
-func _physics_process(delta: float) -> void:	
+func _physics_process(_delta: float) -> void:	
 	if not is_inside_tree():
 		return
 

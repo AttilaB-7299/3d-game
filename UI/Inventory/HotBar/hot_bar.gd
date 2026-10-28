@@ -23,7 +23,7 @@ func _ready() -> void:
 	sbf.border_width_bottom = 2
 	the_panel.add_theme_stylebox_override("panel", sbf)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !Engine.is_editor_hint():
 		if Input.is_action_just_pressed("next item slot"):
 			selected_slot += 1
