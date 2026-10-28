@@ -47,3 +47,6 @@ func handle_possible_state_change():
 	if Input.is_action_just_pressed("attack"):
 		parent.velocity = Vector3.ZERO
 		state_machine.change_state("attack")
+
+	if Input.is_action_pressed("open inventory"):
+		state_machine.change_state("inventory")
