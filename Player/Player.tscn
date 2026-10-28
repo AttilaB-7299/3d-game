@@ -51,38 +51,31 @@ metadata/_custom_type_script = "uid://dqvnmyegmjr7a"
 [node name="IdleState" type="Node" parent="StateMachine" unique_id=1284595308]
 script = ExtResource("7_nqd48")
 state_name = "idle"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="WalkState" type="Node" parent="StateMachine" unique_id=1890211970]
 script = ExtResource("8_8nb7r")
 state_name = "walk"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="RunState" type="Node" parent="StateMachine" unique_id=1833045101]
 script = ExtResource("9_0x8ie")
 state_name = "run"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="FallState" type="Node" parent="StateMachine" unique_id=1407124419]
 script = ExtResource("10_wqc1t")
 state_name = "fall"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="JumpState" type="Node" parent="StateMachine" unique_id=845321404]
 script = ExtResource("11_gjv6x")
 state_name = "jump"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="AttackState" type="Node" parent="StateMachine" unique_id=118654440 node_paths=PackedStringArray("attack_box")]
 script = ExtResource("12_0x8ie")
 attack_box = NodePath("../../attackBox")
 state_name = "attack"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="InventoryState" type="Node" parent="StateMachine" unique_id=796315722]
 script = ExtResource("11_dm7nj")
 state_name = "inventory"
-metadata/_custom_type_script = "uid://dysrjb6qly38t"
 
 [node name="HotBar" parent="." unique_id=1252577093 instance=ExtResource("13_wqc1t")]
 

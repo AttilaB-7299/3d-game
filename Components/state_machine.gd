@@ -25,6 +25,7 @@ func change_state(state_name: String) -> void:
 			current_state._enter()
 			return
 	push_error("State '" + state_name + "' not found")
+	print("CURRENT STATE '" + state_name)
 
 func _setup_states() -> void:
 	for child: State in get_children():
