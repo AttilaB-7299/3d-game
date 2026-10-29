@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b7kw64kmr63p7"]
 
+[ext_resource type="Script" uid="uid://u4268hs8gbfe" path="res://Dev/dev_controls.gd" id="1_dm7nj"]
 [ext_resource type="Script" uid="uid://bwhlp01lh32cj" path="res://Player/player.gd" id="1_s0eop"]
 [ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Test/killzone.tscn" id="2_xd66b"]
 [ext_resource type="PackedScene" uid="uid://ccptbgtlxn2n" path="res://Player/player_camera.tscn" id="3_ijhft"]
@@ -80,3 +81,6 @@ script = ExtResource("12_wqc1t")
 
 [node name="HealthBar" parent="." unique_id=317919888 node_paths=PackedStringArray("player") instance=ExtResource("15_3mea3")]
 player = NodePath("..")
+
+[node name="DevControls" type="Node" parent="." unique_id=1463657231]
+script = ExtResource("1_dm7nj")

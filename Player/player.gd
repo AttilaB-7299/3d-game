@@ -5,6 +5,7 @@ signal took_damage
 var attack_count = 0
 var MAX_HEALTH = 5
 @onready var blockbench_export: Node3D = $blockbench_export
+@onready var dev_controls: Node = $DevControls
 
 #@onready var blockbench_export_2: Node3D = $"KnightModel/blockbench_export2"
 #@onready var blockbench_export_3: Node3D = $"KnightModel/blockbench_export3"
@@ -70,10 +71,7 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause game"):
 		get_tree().current_scene.add_child(pause_menu.instantiate())
 		get_tree().paused = true
-
-	if Input.is_action_just_pressed("reload scene"):
-		get_tree().reload_current_scene()
-	
+	dev_controls._physics_process(_delta)
 	move_and_slide()
 
 
