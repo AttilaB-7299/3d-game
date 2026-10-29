@@ -71,7 +71,7 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause game"):
 		get_tree().current_scene.add_child(pause_menu.instantiate())
 		get_tree().paused = true
-	dev_controls.physics_process(_delta)
+	dev_controls._physics_process(_delta)
 	move_and_slide()
 
 

@@ -1,4 +1,4 @@
-extends CharacterBody3D
+extends Node
 
 func _ready() -> void:
 	pass
