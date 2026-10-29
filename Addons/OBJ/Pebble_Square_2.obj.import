@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://m78l18t82hrn"
-path="res://.godot/imported/Pebble_Square_2.obj-085fc570434a47d37cae664bd4531ad9.mesh"
+path="res://.godot/imported/Pebble_Square_2.obj-5b9f6b92ddfed18981f94e6934bb2d11.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Pebble_Square_2.obj-085fc570434a47d37cae664bd4531ad9.mesh"]
+files=["res://.godot/imported/Pebble_Square_2.obj-5b9f6b92ddfed18981f94e6934bb2d11.mesh"]
 
-source_file="res://Addons/OBJ/Pebble_Square_2.obj"
-dest_files=["res://.godot/imported/Pebble_Square_2.obj-085fc570434a47d37cae664bd4531ad9.mesh", "res://.godot/imported/Pebble_Square_2.obj-085fc570434a47d37cae664bd4531ad9.mesh"]
+source_file="res://addons/OBJ/Pebble_Square_2.obj"
+dest_files=["res://.godot/imported/Pebble_Square_2.obj-5b9f6b92ddfed18981f94e6934bb2d11.mesh", "res://.godot/imported/Pebble_Square_2.obj-5b9f6b92ddfed18981f94e6934bb2d11.mesh"]
 
 [params]
 

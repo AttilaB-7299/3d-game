@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dftoyu8rw0dp4"
-path="res://.godot/imported/Rock_Medium_3.gltf-adb456ba669a57fe26091f4639c3f41a.scn"
+path="res://.godot/imported/Rock_Medium_3.gltf-3a3e27e69349e1380407747f43eef224.scn"
 
 [deps]
 
-source_file="res://Addons/glTF/Rock_Medium_3.gltf"
-dest_files=["res://.godot/imported/Rock_Medium_3.gltf-adb456ba669a57fe26091f4639c3f41a.scn"]
+source_file="res://addons/glTF/Rock_Medium_3.gltf"
+dest_files=["res://.godot/imported/Rock_Medium_3.gltf-3a3e27e69349e1380407747f43eef224.scn"]
 
 [params]
 

@@ -27,7 +27,7 @@ project/assembly_name="3D Game Project"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/lowpolyterrain/plugin.cfg")
 
 [global_group]
 

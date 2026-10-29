@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dt82o4tp0r8t0"
-path="res://.godot/imported/CommonTree_3.fbx-6c2022b8f65aa9d48dace24367287ca8.scn"
+path="res://.godot/imported/CommonTree_3.fbx-8c98289f1a719f8f81b2e5cad817f8dd.scn"
 
 [deps]
 
-source_file="res://Addons/FBX/CommonTree_3.fbx"
-dest_files=["res://.godot/imported/CommonTree_3.fbx-6c2022b8f65aa9d48dace24367287ca8.scn"]
+source_file="res://addons/FBX/CommonTree_3.fbx"
+dest_files=["res://.godot/imported/CommonTree_3.fbx-8c98289f1a719f8f81b2e5cad817f8dd.scn"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://csbnxf0vhij6i"]
 
-[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_0exai"]
+[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_0exai"]
 [ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Enemy/Enemy.tscn" id="2_fgstp"]
 [ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="3_d1trg"]
 [ext_resource type="PackedScene" uid="uid://c0sudd1iptsfc" path="res://UI/Items/testItem.tscn" id="5_d1trg"]

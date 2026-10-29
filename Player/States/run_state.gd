@@ -32,4 +32,3 @@ func handle_possible_state_change():
 
 	if Input.is_action_pressed("open inventory"):
 		state_machine.change_state("inventory")
-

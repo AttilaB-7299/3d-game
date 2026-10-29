@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mwmjrugxwp20"
-path="res://.godot/imported/Bush_Common.fbx-45486ec1ceedbd145d556a40e1d0dda4.scn"
+path="res://.godot/imported/Bush_Common.fbx-327cd2fb9df78a7480da9f3c99e98955.scn"
 
 [deps]
 
-source_file="res://Addons/FBX/Bush_Common.fbx"
-dest_files=["res://.godot/imported/Bush_Common.fbx-45486ec1ceedbd145d556a40e1d0dda4.scn"]
+source_file="res://addons/FBX/Bush_Common.fbx"
+dest_files=["res://.godot/imported/Bush_Common.fbx-327cd2fb9df78a7480da9f3c99e98955.scn"]
 
 [params]
 
@@ -39,7 +39,19 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"meshes": {
+"tree_008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/bush.res",
+"save_to_file/path": "uid://dirfrxwlgmun8"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://jw4dm61hqscn"
-path="res://.godot/imported/Bush_Common.gltf-d72dc2350a6c94a38183fc00b657a0c1.scn"
+path="res://.godot/imported/Bush_Common.gltf-62485998e0ae07992fa92b2e219fa668.scn"
 
 [deps]
 
-source_file="res://Addons/glTF/Bush_Common.gltf"
-dest_files=["res://.godot/imported/Bush_Common.gltf-d72dc2350a6c94a38183fc00b657a0c1.scn"]
+source_file="res://addons/glTF/Bush_Common.gltf"
+dest_files=["res://.godot/imported/Bush_Common.gltf-62485998e0ae07992fa92b2e219fa668.scn"]
 
 [params]
 

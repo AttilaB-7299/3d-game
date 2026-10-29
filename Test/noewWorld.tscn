@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cd0x8vqp8rrac"]
 
-[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_itsfa"]
+[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_itsfa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4x5i"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

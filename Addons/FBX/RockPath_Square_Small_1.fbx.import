@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ddis1phnco50c"
-path="res://.godot/imported/RockPath_Square_Small_1.fbx-7c96fd4d5abf65175b0aa5dfd7e3a8e1.scn"
+path="res://.godot/imported/RockPath_Square_Small_1.fbx-1effe5dcf687867c699703d0962e764c.scn"
 
 [deps]
 
-source_file="res://Addons/FBX/RockPath_Square_Small_1.fbx"
-dest_files=["res://.godot/imported/RockPath_Square_Small_1.fbx-7c96fd4d5abf65175b0aa5dfd7e3a8e1.scn"]
+source_file="res://addons/FBX/RockPath_Square_Small_1.fbx"
+dest_files=["res://.godot/imported/RockPath_Square_Small_1.fbx-1effe5dcf687867c699703d0962e764c.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b14x6rsjr57dr"
-path="res://.godot/imported/Clover_2.gltf-aea86d74d1c3f644528fdef4e9f492eb.scn"
+path="res://.godot/imported/Clover_2.gltf-a4811e7dac52a0c019f0ff327acdf581.scn"
 
 [deps]
 
-source_file="res://Addons/glTF/Clover_2.gltf"
-dest_files=["res://.godot/imported/Clover_2.gltf-aea86d74d1c3f644528fdef4e9f492eb.scn"]
+source_file="res://addons/glTF/Clover_2.gltf"
+dest_files=["res://.godot/imported/Clover_2.gltf-a4811e7dac52a0c019f0ff327acdf581.scn"]
 
 [params]
 

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bgrxw8jmdmqx"]
+
+[ext_resource type="ArrayMesh" uid="uid://b20vdfkbpeqsk" path="res://Meshes/fern.tres" id="1_2t2da"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_2rcc8"]
+
+[node name="Testetsdtvwsuyv" type="Node3D" unique_id=324941053]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1589842756]
+transform = Transform3D(21.160004, 0, 0, 0, 1, 0, 0, 0, 31.5, 0, 0, 0)
+mesh = ExtResource("1_2t2da")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=2037752371]
+multimesh = SubResource("MultiMesh_2rcc8")

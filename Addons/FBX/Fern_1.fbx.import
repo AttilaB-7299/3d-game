@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dybagihhxg2pv"
-path="res://.godot/imported/Fern_1.fbx-f5401b1ea11f5d1b1eb54c7fa8bcc4b3.scn"
+path="res://.godot/imported/Fern_1.fbx-48daaad9feb99ec05c8c7e5e37c1da5e.scn"
 
 [deps]
 
-source_file="res://Addons/FBX/Fern_1.fbx"
-dest_files=["res://.godot/imported/Fern_1.fbx-f5401b1ea11f5d1b1eb54c7fa8bcc4b3.scn"]
+source_file="res://addons/FBX/Fern_1.fbx"
+dest_files=["res://.godot/imported/Fern_1.fbx-48daaad9feb99ec05c8c7e5e37c1da5e.scn"]
 
 [params]
 
@@ -39,7 +39,19 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Plane_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Meshes/fern.tres",
+"save_to_file/path": "uid://lx42d22w8kkf"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

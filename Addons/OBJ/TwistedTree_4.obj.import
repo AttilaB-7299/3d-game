@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://76h607kdesqu"
-path="res://.godot/imported/TwistedTree_4.obj-a8b9c247da094943f3f9c7b3992bf4d1.mesh"
+path="res://.godot/imported/TwistedTree_4.obj-17384b16b2978e1c9bc2ff81cccc25f0.mesh"
 
 [deps]
 
-files=["res://.godot/imported/TwistedTree_4.obj-a8b9c247da094943f3f9c7b3992bf4d1.mesh"]
+files=["res://.godot/imported/TwistedTree_4.obj-17384b16b2978e1c9bc2ff81cccc25f0.mesh"]
 
-source_file="res://Addons/OBJ/TwistedTree_4.obj"
-dest_files=["res://.godot/imported/TwistedTree_4.obj-a8b9c247da094943f3f9c7b3992bf4d1.mesh", "res://.godot/imported/TwistedTree_4.obj-a8b9c247da094943f3f9c7b3992bf4d1.mesh"]
+source_file="res://addons/OBJ/TwistedTree_4.obj"
+dest_files=["res://.godot/imported/TwistedTree_4.obj-17384b16b2978e1c9bc2ff81cccc25f0.mesh", "res://.godot/imported/TwistedTree_4.obj-17384b16b2978e1c9bc2ff81cccc25f0.mesh"]
 
 [params]
 
