@@ -11,6 +11,12 @@ size = Vector3(2.4, 2.9, 1.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xeo28"]
 size = Vector3(2, 2.9, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_vm0tb"]
+radius = 7.3336196
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nfqi3"]
+radius = 1.8999062
+
 [node name="Enemy" type="CharacterBody3D" unique_id=1821107149]
 collision_layer = 3
 collision_mask = 3
@@ -29,3 +35,25 @@ shape = SubResource("BoxShape3D_xeo28")
 
 [node name="blockbench_export" parent="." unique_id=2095166104 instance=ExtResource("3_vso2s")]
 script = ExtResource("4_fkela")
+
+[node name="NoNoZone" type="Area3D" parent="." unique_id=1990252241]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NoNoZone" unique_id=1384925067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.439881, 0)
+shape = SubResource("SphereShape3D_vm0tb")
+debug_color = Color(1, 1, 0.69803923, 0.41960785)
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=375016955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4294147, 0)
+target_position = Vector3(0, 0, -20)
+
+[node name="YesYesZone" type="Area3D" parent="." unique_id=92344695]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="YesYesZone" unique_id=1202953821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.219969, 0)
+shape = SubResource("SphereShape3D_nfqi3")
+
+[connection signal="body_entered" from="NoNoZone" to="." method="_on_no_no_zone_body_entered"]
+[connection signal="body_exited" from="NoNoZone" to="." method="_on_no_no_zone_body_exited"]
