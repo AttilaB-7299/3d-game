@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dysmm6jiy2gse"
-path="res://.godot/imported/Flower_3_Single.gltf-72c52fabeaba74b58b2d0e27fb0852be.scn"
+path="res://.godot/imported/Flower_3_Single.gltf-3947a70c9ce9feaabd12a7ace4ac3ea5.scn"
 
 [deps]
 
-source_file="res://addons/glTF/Flower_3_Single.gltf"
-dest_files=["res://.godot/imported/Flower_3_Single.gltf-72c52fabeaba74b58b2d0e27fb0852be.scn"]
+source_file="res://Addons/glTF/Flower_3_Single.gltf"
+dest_files=["res://.godot/imported/Flower_3_Single.gltf-3947a70c9ce9feaabd12a7ace4ac3ea5.scn"]
 
 [params]
 

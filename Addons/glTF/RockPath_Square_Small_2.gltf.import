@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d302xxu5x43ah"
-path="res://.godot/imported/RockPath_Square_Small_2.gltf-0446884e4658261eeb9cea6977858de4.scn"
+path="res://.godot/imported/RockPath_Square_Small_2.gltf-0d4841b2b49800b29b0802abd0445090.scn"
 
 [deps]
 
-source_file="res://addons/glTF/RockPath_Square_Small_2.gltf"
-dest_files=["res://.godot/imported/RockPath_Square_Small_2.gltf-0446884e4658261eeb9cea6977858de4.scn"]
+source_file="res://Addons/glTF/RockPath_Square_Small_2.gltf"
+dest_files=["res://.godot/imported/RockPath_Square_Small_2.gltf-0d4841b2b49800b29b0802abd0445090.scn"]
 
 [params]
 

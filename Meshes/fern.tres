@@ -1,6 +1,6 @@
-[gd_resource type="ArrayMesh" format=4 uid="uid://b20vdfkbpeqsk"]
+[gd_resource type="ArrayMesh" format=4 uid="uid://lx42d22w8kkf"]
 
-[ext_resource type="Texture2D" uid="uid://dauw8h8u40e04" path="res://addons/Textures/Leaves.png" id="1_jbqxd"]
+[ext_resource type="Texture2D" uid="uid://dauw8h8u40e04" path="res://Addons/Textures/Leaves.png" id="1_jbqxd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v06oo"]
 resource_name = "Leaves"

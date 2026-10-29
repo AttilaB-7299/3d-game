@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://djae0ek2red7m"
-path="res://.godot/imported/Plant_1.obj-89b80f11ebbb6381603acc112bafb08c.mesh"
+path="res://.godot/imported/Plant_1.obj-7d46a81b344ce40eb17d0817b388b2f3.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Plant_1.obj-89b80f11ebbb6381603acc112bafb08c.mesh"]
+files=["res://.godot/imported/Plant_1.obj-7d46a81b344ce40eb17d0817b388b2f3.mesh"]
 
-source_file="res://addons/OBJ/Plant_1.obj"
-dest_files=["res://.godot/imported/Plant_1.obj-89b80f11ebbb6381603acc112bafb08c.mesh", "res://.godot/imported/Plant_1.obj-89b80f11ebbb6381603acc112bafb08c.mesh"]
+source_file="res://Addons/OBJ/Plant_1.obj"
+dest_files=["res://.godot/imported/Plant_1.obj-7d46a81b344ce40eb17d0817b388b2f3.mesh", "res://.godot/imported/Plant_1.obj-7d46a81b344ce40eb17d0817b388b2f3.mesh"]
 
 [params]
 

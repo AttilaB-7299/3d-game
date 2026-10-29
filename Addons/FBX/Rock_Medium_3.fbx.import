@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://1nwhb7gjbico"
-path="res://.godot/imported/Rock_Medium_3.fbx-b0691ec51dd93d840bddf95764a96cb9.scn"
+path="res://.godot/imported/Rock_Medium_3.fbx-bca2304762447f0b365e69d52f58977d.scn"
 
 [deps]
 
-source_file="res://addons/FBX/Rock_Medium_3.fbx"
-dest_files=["res://.godot/imported/Rock_Medium_3.fbx-b0691ec51dd93d840bddf95764a96cb9.scn"]
+source_file="res://Addons/FBX/Rock_Medium_3.fbx"
+dest_files=["res://.godot/imported/Rock_Medium_3.fbx-bca2304762447f0b365e69d52f58977d.scn"]
 
 [params]
 

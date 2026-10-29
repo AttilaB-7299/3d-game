@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://sqmy2i1ra0j1"
-path="res://.godot/imported/Grass_Wispy_Tall.obj-30f8c3fed5c58d9e1df60c43272b864b.mesh"
+path="res://.godot/imported/Grass_Wispy_Tall.obj-549a1f694ce11b4c372f82aa1ff9d434.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Grass_Wispy_Tall.obj-30f8c3fed5c58d9e1df60c43272b864b.mesh"]
+files=["res://.godot/imported/Grass_Wispy_Tall.obj-549a1f694ce11b4c372f82aa1ff9d434.mesh"]
 
-source_file="res://addons/OBJ/Grass_Wispy_Tall.obj"
-dest_files=["res://.godot/imported/Grass_Wispy_Tall.obj-30f8c3fed5c58d9e1df60c43272b864b.mesh", "res://.godot/imported/Grass_Wispy_Tall.obj-30f8c3fed5c58d9e1df60c43272b864b.mesh"]
+source_file="res://Addons/OBJ/Grass_Wispy_Tall.obj"
+dest_files=["res://.godot/imported/Grass_Wispy_Tall.obj-549a1f694ce11b4c372f82aa1ff9d434.mesh", "res://.godot/imported/Grass_Wispy_Tall.obj-549a1f694ce11b4c372f82aa1ff9d434.mesh"]
 
 [params]
 
