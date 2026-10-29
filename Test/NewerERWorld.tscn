@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://u5cfkfg7a18c"]
 
-[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_606ac"]
-[ext_resource type="ArrayMesh" uid="uid://qbtudgtgp62f" path="res://Meshes/bushWithFlowers.res" id="2_5sc8p"]
+[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_606ac"]
+[ext_resource type="ArrayMesh" uid="uid://c2vtgiyslrixt" path="res://Meshes/bushWithFlowers.res" id="2_5sc8p"]
 [ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="3_fetdw"]
+[ext_resource type="PackedScene" uid="uid://btl1idbpxc2jw" path="res://Test/test_item.tscn" id="4_ammxv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fetdw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -4471,3 +4472,8 @@ metadata/_edit_lock_ = false
 
 [node name="Player" parent="." unique_id=153155451 instance=ExtResource("3_fetdw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.177853, -2.7721527)
+
+[node name="TestItem" parent="." unique_id=1548791219 instance=ExtResource("4_ammxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4553738, 7.333122, -5.108917)
+collision_layer = 3
+collision_mask = 3

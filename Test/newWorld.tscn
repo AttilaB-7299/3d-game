@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://csbnxf0vhij6i"]
 
-[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_0exai"]
+[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_0exai"]
 [ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Enemy/Enemy.tscn" id="2_fgstp"]
 [ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="3_d1trg"]
-[ext_resource type="PackedScene" uid="uid://c0sudd1iptsfc" path="res://UI/Items/testItem.tscn" id="5_d1trg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j4x5i"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -328,6 +327,3 @@ collision_mask = 0
 
 [node name="Chunk_4_4_Col" type="CollisionShape3D" parent="LowPolyTerrainManager_Collisions/Static_Chunk_4_4" unique_id=113302879]
 shape = SubResource("ConcavePolygonShape3D_tf5xo")
-
-[node name="testItem" parent="." unique_id=1399355146 instance=ExtResource("5_d1trg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -7)
