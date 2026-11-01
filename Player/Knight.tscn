@@ -3,3 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://dh2f5maxhetqo" path="res://Player/Knight_clean.gltf" id="1_gb5m4"]
 
 [node name="blockbench_export" unique_id=470687339 instance=ExtResource("1_gb5m4")]
+
+[node name="Skeleton3D" parent="group" parent_id_path=PackedInt32Array(622467517) index="0" unique_id=1428285676]
+bones/1/rotation = Quaternion(-0.16808073, 0, 0, 0.9857733)
+bones/3/rotation = Quaternion(-0.29683, 0, 0, 0.9549303)
+bones/5/rotation = Quaternion(0.16808073, 0, 0, 0.9857733)
+bones/7/rotation = Quaternion(-0.042981114, 0, 0, 0.99907595)
+bones/9/rotation = Quaternion(0, 0.09835545, 0, 0.9951514)
+bones/13/rotation = Quaternion(-0.16043165, 0.002320361, 0.14208658, 0.97676396)
+bones/17/rotation = Quaternion(0.16117603, 0.009584105, -0.15216814, 0.97507715)

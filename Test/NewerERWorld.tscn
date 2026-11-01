@@ -1,7 +1,13 @@
 [gd_scene format=4 uid="uid://u5cfkfg7a18c"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://Addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_606ac"]
 [ext_resource type="ArrayMesh" uid="uid://c2vtgiyslrixt" path="res://Meshes/bushWithFlowers.res" id="2_5sc8p"]
+=======
+[ext_resource type="Script" uid="uid://dxq4p56omxx80" path="res://addons/lowpolyterrain/LowPolyTerrainManager.gd" id="1_606ac"]
+[ext_resource type="ArrayMesh" uid="uid://qbtudgtgp62f" path="res://Meshes/bushWithFlowers.res" id="2_5sc8p"]
+[ext_resource type="ArrayMesh" uid="uid://d27gax3khfjpi" path="res://Meshes/plant1.res" id="3_11t7l"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="3_fetdw"]
 [ext_resource type="PackedScene" uid="uid://btl1idbpxc2jw" path="res://Test/test_item.tscn" id="4_ammxv"]
 
@@ -4471,6 +4477,10 @@ collision_mask = 0
 
 [node name="Chunk_19_19_Col" type="CollisionShape3D" parent="WorldElements/LowPolyTerrainManager_Collisions/Static_Chunk_19_19" unique_id=2063416814]
 shape = SubResource("ConcavePolygonShape3D_hexi0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldElements" unique_id=1638973827]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 28.144455, 0)
+mesh = ExtResource("3_11t7l")
 
 [node name="Player" parent="." unique_id=153155451 instance=ExtResource("3_fetdw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.177853, -2.7721527)
