@@ -9,12 +9,13 @@
 [ext_resource type="Script" uid="uid://btq6hpluy6hqf" path="res://Player/States/walk_state.gd" id="8_8nb7r"]
 [ext_resource type="Script" uid="uid://6t6yy005iyyr" path="res://Player/States/run_state.gd" id="9_0x8ie"]
 [ext_resource type="PackedScene" uid="uid://dqlqlt2uwu2po" path="res://Player/Knight.tscn" id="11_8nb7r"]
-[ext_resource type="Script" uid="uid://bsasoelbbic85" path="res://Player/inventory_state.gd" id="11_dm7nj"]
+[ext_resource type="Script" uid="uid://bsasoelbbic85" path="res://Player/States/inventory_state.gd" id="11_dm7nj"]
 [ext_resource type="Script" uid="uid://difukynyvvwmv" path="res://Player/States/jump_state.gd" id="11_gjv6x"]
 [ext_resource type="Script" uid="uid://qvwhkc31cgig" path="res://Player/States/attack_state.gd" id="12_0x8ie"]
 [ext_resource type="Script" uid="uid://pdpy5pvns4i1" path="res://UI/Items/player_modeled.gd" id="12_wqc1t"]
 [ext_resource type="PackedScene" uid="uid://bwbk4w7qe7t1t" path="res://UI/Inventory/HotBar/hot_bar.tscn" id="13_wqc1t"]
 [ext_resource type="PackedScene" uid="uid://cv1ojaqjgvlnm" path="res://UI/HealthBar/HealthBar.tscn" id="15_3mea3"]
+[ext_resource type="Script" uid="uid://w2px26tjuyrr" path="res://Components/inventory.gd" id="16_7v5gs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8qdug"]
 size = Vector3(1, 2.5044632, 3)
@@ -84,3 +85,13 @@ player = NodePath("..")
 
 [node name="DevControls" type="Node" parent="." unique_id=1463657231]
 script = ExtResource("1_dm7nj")
+
+[node name="HiddenInv" type="Node" parent="." unique_id=986523021]
+script = ExtResource("16_7v5gs")
+size = 27
+metadata/_custom_type_script = "uid://w2px26tjuyrr"
+
+[node name="HotbarInv" type="Node" parent="." unique_id=707580504]
+script = ExtResource("16_7v5gs")
+size = 9
+metadata/_custom_type_script = "uid://w2px26tjuyrr"

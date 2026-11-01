@@ -2,7 +2,7 @@ extends State
 
 @onready var blockbench_export: Node3D = $"../../blockbench_export"
 
-var inventory_scene = preload("res://UI/Menu/inventory.tscn")
+var inventory_scene = preload("res://UI/Menu/inventory_menu.tscn")
 var can_close_inventory := false
 
 var inventory_node
@@ -30,5 +30,3 @@ func _exit() -> void:
 	parent.health_bar.visible = true
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	Input.action_release("open inventory") # so it does not immediately open inventory again
-
-

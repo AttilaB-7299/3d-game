@@ -1248,6 +1248,7 @@ transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 5.7334347, 0)
 mesh = ExtResource("2_5sc8p")
 
 [node name="Bushes" type="MultiMeshInstance3D" parent="WorldElements" unique_id=846107958]
+visible = false
 multimesh = SubResource("MultiMesh_fetdw")
 
 [node name="LowPolyTerrainManager" type="Node3D" parent="WorldElements" unique_id=990647755]

@@ -22,7 +22,14 @@ var MAX_HEALTH = 5
 @onready var hotbar = $HotBar
 @onready var health_bar = $HealthBar
 
+@onready var hiddenInv: Inventory = $HiddenInv
+@onready var hotbarInv: Inventory = $HotbarInv
+
+
 const pause_menu = preload("res://UI/Menu/pause_menu.tscn")
+
+# var inventory: Array[Item]
+
 func checkPickUp():
 	pass
 	#if 
