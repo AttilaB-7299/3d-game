@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dyjbjuwu42uqo"
-path="res://.godot/imported/Petal_1.obj-a33135083bae3bf1ac760e43185f1311.mesh"
+path="res://.godot/imported/Petal_1.obj-47d340c7067ff32f70bd5db389411e90.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Petal_1.obj-a33135083bae3bf1ac760e43185f1311.mesh"]
+files=["res://.godot/imported/Petal_1.obj-47d340c7067ff32f70bd5db389411e90.mesh"]
 
-source_file="res://Addons/OBJ/Petal_1.obj"
-dest_files=["res://.godot/imported/Petal_1.obj-a33135083bae3bf1ac760e43185f1311.mesh", "res://.godot/imported/Petal_1.obj-a33135083bae3bf1ac760e43185f1311.mesh"]
+source_file="res://addons/OBJ/Petal_1.obj"
+dest_files=["res://.godot/imported/Petal_1.obj-47d340c7067ff32f70bd5db389411e90.mesh", "res://.godot/imported/Petal_1.obj-47d340c7067ff32f70bd5db389411e90.mesh"]
 
 [params]
 

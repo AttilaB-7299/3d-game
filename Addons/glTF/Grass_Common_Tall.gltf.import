@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://6pbrltsyntm4"
-path="res://.godot/imported/Grass_Common_Tall.gltf-f6166c88833c57f7c9479345e9171f6b.scn"
+path="res://.godot/imported/Grass_Common_Tall.gltf-7663675fc08aeea466453a6f7c3438ca.scn"
 
 [deps]
 
-source_file="res://Addons/glTF/Grass_Common_Tall.gltf"
-dest_files=["res://.godot/imported/Grass_Common_Tall.gltf-f6166c88833c57f7c9479345e9171f6b.scn"]
+source_file="res://addons/glTF/Grass_Common_Tall.gltf"
+dest_files=["res://.godot/imported/Grass_Common_Tall.gltf-7663675fc08aeea466453a6f7c3438ca.scn"]
 
 [params]
 

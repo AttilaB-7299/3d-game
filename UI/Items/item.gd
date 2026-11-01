@@ -21,7 +21,7 @@ func _ready() -> void:
 	pickup_coll_shape = CollisionShape3D.new()
 	pickup_coll_shape.shape = SphereShape3D.new()
 	pickup_coll_shape.shape.radius = item_pickup_range
-	pickup_coll_shape.debug_color = Color(0,0,1, .75)
+	pickup_coll_shape.debug_color = Color(0.0, 0.0, 0.961, 0.851)
 	# pickup_coll_shape.add_to_group("da coll shape")
 	add_child(pickup_coll_shape)
 

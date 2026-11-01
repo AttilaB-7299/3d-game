@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bx6tt3gt0wvc1"
-path="res://.godot/imported/RockPath_Round_Thin.obj-51d3f6bbe8918010a604583660c55f46.mesh"
+path="res://.godot/imported/RockPath_Round_Thin.obj-489326498325912a7f39697084caa0aa.mesh"
 
 [deps]
 
-files=["res://.godot/imported/RockPath_Round_Thin.obj-51d3f6bbe8918010a604583660c55f46.mesh"]
+files=["res://.godot/imported/RockPath_Round_Thin.obj-489326498325912a7f39697084caa0aa.mesh"]
 
-source_file="res://Addons/OBJ/RockPath_Round_Thin.obj"
-dest_files=["res://.godot/imported/RockPath_Round_Thin.obj-51d3f6bbe8918010a604583660c55f46.mesh", "res://.godot/imported/RockPath_Round_Thin.obj-51d3f6bbe8918010a604583660c55f46.mesh"]
+source_file="res://addons/OBJ/RockPath_Round_Thin.obj"
+dest_files=["res://.godot/imported/RockPath_Round_Thin.obj-489326498325912a7f39697084caa0aa.mesh", "res://.godot/imported/RockPath_Round_Thin.obj-489326498325912a7f39697084caa0aa.mesh"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvwdovattkic8"
-path="res://.godot/imported/Leaf_Pine.png-86243ef1b9c96a653b60a08bb97bbe6e.ctex"
+path="res://.godot/imported/Leaf_Pine.png-46f0e2fa7b13650377f6757e77394d20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Addons/Textures/Leaf_Pine.png"
-dest_files=["res://.godot/imported/Leaf_Pine.png-86243ef1b9c96a653b60a08bb97bbe6e.ctex"]
+source_file="res://addons/Textures/Leaf_Pine.png"
+dest_files=["res://.godot/imported/Leaf_Pine.png-46f0e2fa7b13650377f6757e77394d20.ctex"]
 
 [params]
 

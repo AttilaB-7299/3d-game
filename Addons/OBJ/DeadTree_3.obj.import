@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://dsqo0gh7mg5pg"
-path="res://.godot/imported/DeadTree_3.obj-03e735edf83f5b0cc35975f25131dd0d.mesh"
+path="res://.godot/imported/DeadTree_3.obj-ed221a48174ccd3b168044a49a3e9ed2.mesh"
 
 [deps]
 
-files=["res://.godot/imported/DeadTree_3.obj-03e735edf83f5b0cc35975f25131dd0d.mesh"]
+files=["res://.godot/imported/DeadTree_3.obj-ed221a48174ccd3b168044a49a3e9ed2.mesh"]
 
-source_file="res://Addons/OBJ/DeadTree_3.obj"
-dest_files=["res://.godot/imported/DeadTree_3.obj-03e735edf83f5b0cc35975f25131dd0d.mesh", "res://.godot/imported/DeadTree_3.obj-03e735edf83f5b0cc35975f25131dd0d.mesh"]
+source_file="res://addons/OBJ/DeadTree_3.obj"
+dest_files=["res://.godot/imported/DeadTree_3.obj-ed221a48174ccd3b168044a49a3e9ed2.mesh", "res://.godot/imported/DeadTree_3.obj-ed221a48174ccd3b168044a49a3e9ed2.mesh"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://by3j67urv62pq"
-path="res://.godot/imported/Pebble_Square_5.gltf-434d64b5177796a0bdf13b3ca7e4a1c2.scn"
+path="res://.godot/imported/Pebble_Square_5.gltf-ea6bdc037c7a14d772fe644641c60805.scn"
 
 [deps]
 
-source_file="res://Addons/glTF/Pebble_Square_5.gltf"
-dest_files=["res://.godot/imported/Pebble_Square_5.gltf-434d64b5177796a0bdf13b3ca7e4a1c2.scn"]
+source_file="res://addons/glTF/Pebble_Square_5.gltf"
+dest_files=["res://.godot/imported/Pebble_Square_5.gltf-ea6bdc037c7a14d772fe644641c60805.scn"]
 
 [params]
 

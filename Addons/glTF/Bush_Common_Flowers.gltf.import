@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfhpiy1c4qrmq"
-path="res://.godot/imported/Bush_Common_Flowers.gltf-c29b807c60c6b9284272b41d529f1fe6.scn"
+path="res://.godot/imported/Bush_Common_Flowers.gltf-2199d66d8ef419fe500304ec9922b232.scn"
 
 [deps]
 
-source_file="res://Addons/glTF/Bush_Common_Flowers.gltf"
-dest_files=["res://.godot/imported/Bush_Common_Flowers.gltf-c29b807c60c6b9284272b41d529f1fe6.scn"]
+source_file="res://addons/glTF/Bush_Common_Flowers.gltf"
+dest_files=["res://.godot/imported/Bush_Common_Flowers.gltf-2199d66d8ef419fe500304ec9922b232.scn"]
 
 [params]
 

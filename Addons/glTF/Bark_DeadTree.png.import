@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqhrkdg01p2wb"
-path.s3tc="res://.godot/imported/Bark_DeadTree.png-44395f4cf93bc16b195ebd3d1cd5b5f5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bark_DeadTree.png-11cfe00ab436db3b083097352605a8ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Addons/glTF/Bark_DeadTree.png"
-dest_files=["res://.godot/imported/Bark_DeadTree.png-44395f4cf93bc16b195ebd3d1cd5b5f5.s3tc.ctex"]
+source_file="res://addons/glTF/Bark_DeadTree.png"
+dest_files=["res://.godot/imported/Bark_DeadTree.png-11cfe00ab436db3b083097352605a8ae.s3tc.ctex"]
 
 [params]
 

@@ -94,4 +94,3 @@ func add_signals_to_item(area: Area2D, panel: Panel):
 	area.mouse_exited.connect(func():
 		panel.remove_theme_stylebox_override("panel")
 	)
-

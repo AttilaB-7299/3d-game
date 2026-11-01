@@ -11,4 +11,3 @@ var vals: Array[Item]
 func _ready() -> void:
 	for i in range(size):
 		vals.append(null)
-

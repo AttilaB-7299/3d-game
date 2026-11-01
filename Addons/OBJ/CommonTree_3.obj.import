@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://b85of36em4gkj"
-path="res://.godot/imported/CommonTree_3.obj-ba5c8982b79093638154728f7b7da17b.mesh"
+path="res://.godot/imported/CommonTree_3.obj-2d16c722cd8e56dc6d577e6c1166dfeb.mesh"
 
 [deps]
 
-files=["res://.godot/imported/CommonTree_3.obj-ba5c8982b79093638154728f7b7da17b.mesh"]
+files=["res://.godot/imported/CommonTree_3.obj-2d16c722cd8e56dc6d577e6c1166dfeb.mesh"]
 
-source_file="res://Addons/OBJ/CommonTree_3.obj"
-dest_files=["res://.godot/imported/CommonTree_3.obj-ba5c8982b79093638154728f7b7da17b.mesh", "res://.godot/imported/CommonTree_3.obj-ba5c8982b79093638154728f7b7da17b.mesh"]
+source_file="res://addons/OBJ/CommonTree_3.obj"
+dest_files=["res://.godot/imported/CommonTree_3.obj-2d16c722cd8e56dc6d577e6c1166dfeb.mesh", "res://.godot/imported/CommonTree_3.obj-2d16c722cd8e56dc6d577e6c1166dfeb.mesh"]
 
 [params]
 

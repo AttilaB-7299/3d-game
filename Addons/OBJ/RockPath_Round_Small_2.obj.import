@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://qhfq3m2coq68"
-path="res://.godot/imported/RockPath_Round_Small_2.obj-394e9f111a04b53883b27e9d511ab85c.mesh"
+path="res://.godot/imported/RockPath_Round_Small_2.obj-9eccf5e2604a57527d0d7e327c41e4f2.mesh"
 
 [deps]
 
-files=["res://.godot/imported/RockPath_Round_Small_2.obj-394e9f111a04b53883b27e9d511ab85c.mesh"]
+files=["res://.godot/imported/RockPath_Round_Small_2.obj-9eccf5e2604a57527d0d7e327c41e4f2.mesh"]
 
-source_file="res://Addons/OBJ/RockPath_Round_Small_2.obj"
-dest_files=["res://.godot/imported/RockPath_Round_Small_2.obj-394e9f111a04b53883b27e9d511ab85c.mesh", "res://.godot/imported/RockPath_Round_Small_2.obj-394e9f111a04b53883b27e9d511ab85c.mesh"]
+source_file="res://addons/OBJ/RockPath_Round_Small_2.obj"
+dest_files=["res://.godot/imported/RockPath_Round_Small_2.obj-9eccf5e2604a57527d0d7e327c41e4f2.mesh", "res://.godot/imported/RockPath_Round_Small_2.obj-9eccf5e2604a57527d0d7e327c41e4f2.mesh"]
 
 [params]
 
