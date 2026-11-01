@@ -74,7 +74,8 @@ state_name = "attack"
 script = ExtResource("11_dm7nj")
 state_name = "inventory"
 
-[node name="HotBar" parent="." unique_id=1252577093 instance=ExtResource("13_wqc1t")]
+[node name="HotBar" parent="." unique_id=1252577093 node_paths=PackedStringArray("player") instance=ExtResource("13_wqc1t")]
+player = NodePath("..")
 
 [node name="blockbench_export" parent="." unique_id=470687339 instance=ExtResource("11_8nb7r")]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)

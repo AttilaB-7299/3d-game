@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btl1idbpxc2jw"]
 
 [ext_resource type="Script" uid="uid://41wcnucwvepr" path="res://UI/Items/item.gd" id="1_g07hl"]
+[ext_resource type="Texture2D" uid="uid://bvlxnrsb3t7pf" path="res://imported/icon.svg" id="2_p6r5d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g07hl"]
 
@@ -14,6 +15,7 @@ script = ExtResource("1_g07hl")
 item_name = "Test"
 mesh = NodePath("MeshInstance3D")
 item_pickup_range = 2.0
+icon = ExtResource("2_p6r5d")
 metadata/_custom_type_script = "uid://41wcnucwvepr"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1283402419]

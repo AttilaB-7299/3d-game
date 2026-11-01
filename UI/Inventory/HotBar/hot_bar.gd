@@ -1,6 +1,9 @@
 @tool
 extends Control
 
+
+@export var player: Player
+
 @export var num_of_slots := 9 : set = update_num_of_slots
 var selected_slot = 0 : set = update_selected_slot
 
@@ -22,6 +25,8 @@ func _ready() -> void:
 	sbf.border_width_top = 2
 	sbf.border_width_bottom = 2
 	the_panel.add_theme_stylebox_override("panel", sbf)
+
+	player.pickup_item_hotbar.connect(_update_slot_icon)
 
 func _process(_delta: float) -> void:
 	if !Engine.is_editor_hint():
@@ -69,3 +74,16 @@ func update_selected_slot(new_val: int):
 	the_panel.add_theme_stylebox_override("panel", sbf)
 
 	selected_slot = new_val
+
+
+func _update_slot_icon(index: int):
+	var panel: Panel = slots.get_child(index)
+
+	if !panel.get_child_count(false):
+		var curr_item: Item = player.hotbarInv.vals.get(index)
+		var texture_rect := TextureRect.new()
+		texture_rect.texture = curr_item.icon
+		texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		texture_rect.size = panel.size - Vector2.ONE * 8
+		texture_rect.position = (panel.size - texture_rect.size) / 2
+		panel.add_child(texture_rect)

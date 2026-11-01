@@ -60,11 +60,13 @@ func update_pickup_range(new_val: float):
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is Player:
-		print("ITEM COLLECTED")
-		set_collision_layer_value(1, false)
-		set_collision_layer_value(2, false)
-		hide()
+		if body.attempt_pickup_item(self):
+			print("ITEM COLLECTED")
+			set_collision_layer_value(1, false)
+			set_collision_layer_value(2, false)
+			hide()
+			pickup_coll_shape.disabled = true
+			call_deferred("reparent", body)
+		else:
+			print_debug("INVENTORY FULL")
 
-		pickup_coll_shape.disabled = true
-
-		# TODO: move this to player
