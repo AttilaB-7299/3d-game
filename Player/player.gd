@@ -76,6 +76,10 @@ func _physics_process(_delta: float) -> void:
 		return
 
 	if Input.is_action_just_pressed("pause game"):
+		# close inventory
+		if state_machine.current_state.state_name == "inventory":
+			state_machine.change_state("idle")
+
 		get_tree().current_scene.add_child(pause_menu.instantiate())
 		get_tree().paused = true
 	dev_controls._physics_process(_delta)
