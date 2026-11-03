@@ -158,6 +158,7 @@ attack={
 3d_physics/layer_1="World"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Items"
+3d_physics/layer_4="Enemy"
 
 [physics]
 

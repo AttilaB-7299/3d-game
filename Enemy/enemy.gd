@@ -1,32 +1,28 @@
 extends CharacterBody3D
 class_name Enemy
 
-@onready var killzone: Killzone = $Killzone
+@onready var attackbox_component: AttackBoxComponent = $AttackBoxComponent
 @onready var nono_zone: Area3D = $NoNoZone
+@onready var blockbench_export: Node3D = $blockbench_export
 
 @export var speed := 5.0
+@export var attack_cooldown: float
 
 var player: Player
+var player_found = true
 
-@onready var blockbench_export: Node3D = $blockbench_export
 
 enum States {
 	IDLE,
 	CHASING,
 	ATTACKING,
 }
-
 var current_state := States.IDLE
 
-# var state := "chasing"
-var playerFound = true
-var inRange = false
+
 func _ready():
-	killzone._setOwner("Enemy")
-	#set_deferred("monitoring", true)  
-	#set_deferred("monitorable", true)  
-	#killzone._hitboxEnable()
-	#print("ENABLED ENEMY HITBOX")
+	pass
+
 func _physics_process(_delta: float) -> void:
 
 	if !is_on_floor():
@@ -61,7 +57,6 @@ func handle_idle_state():
 	blockbench_export._playAnim("idle")
 	
 
-
 func handle_chasing_state(delta: float):
 	blockbench_export._playAnim("walk")
 	look_at(player.global_position)
@@ -70,16 +65,43 @@ func handle_chasing_state(delta: float):
 
 func handle_attacking_state():
 	pass
+	# if attackbox_component.can_attack:
+	# 	blockbench_export._playAnim("stab")
 
 
 func _on_no_no_zone_body_entered(body: Node3D) -> void:
 	if body is Player:
 		player = body
+		player_found = true
 		current_state = States.CHASING
 
 
 func _on_no_no_zone_body_exited(body: Node3D) -> void:
 	if body is Player:
+		player_found = false
 		current_state = States.IDLE
 
 	
+# func _on_attack_box_hit_by_hitbox(hitbox: Variant) -> void:
+# 	current_state = States.ATTACKING
+
+func _on_attack_box_component_hitbox_entered(hitbox: HitBoxComponent) -> void:
+	current_state = States.ATTACKING
+
+
+func _on_attack_box_component_hitbox_exited(hitbox: HitBoxComponent) -> void:
+	if player_found:
+		current_state = States.CHASING
+	else:
+		current_state = States.IDLE
+
+func _on_attack_box_component_attack(by: int) -> void:
+	blockbench_export._playAnim("stab")
+
+
+func _on_health_component_die() -> void:
+	print_debug("ENEMY DIED")
+	queue_free()
+
+func _on_health_component_current_health_changed(by: int) -> void:
+	print_debug("ENEMY HEALTH: " + str($HealthComponent.current_health))

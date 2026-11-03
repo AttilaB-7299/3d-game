@@ -8,7 +8,7 @@ extends State
 #@onready var blockbench_export_5: Node3D = $"../../KnightModel/blockbench_export5"
 #@onready var blockbench_export_6: Node3D = $"../../KnightModel/blockbench_export6"
 #@onready var blockbench_export_7: Node3D = $"../../KnightModel/blockbench_export7"
-@export var attack_box: Killzone
+@export var attack_box: AttackBoxComponent
 
 var attack_count: int
 
@@ -21,7 +21,7 @@ func _enter() -> void:
 	blockbench_export._animBlend("hit", 0.2)
 	await get_tree().create_timer(0.5).timeout
 	print("ENABLE ATTACK")
-	attack_box._hitboxEnable()
+	attack_box.enabled = true
 	if (attack_count < 3):
 		attack_count += 1
 	else:
@@ -29,7 +29,7 @@ func _enter() -> void:
 	print ("done ",  attack_count, " attacks")
 	await get_tree().create_timer(0.1).timeout
 	print("DISABLE ATTACK")
-	attack_box._hitboxDisable()
+	attack_box.enabled = false
 
 	handle_possible_state_change()
 

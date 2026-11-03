@@ -1,36 +1,29 @@
 [gd_scene format=3 uid="uid://d08e75xxf050j"]
 
 [ext_resource type="Script" uid="uid://dexgdkxaf6eyo" path="res://Enemy/enemy.gd" id="1_3homo"]
-[ext_resource type="PackedScene" uid="uid://68swgx1edd4w" path="res://Test/killzone.tscn" id="1_jj8qi"]
 [ext_resource type="PackedScene" uid="uid://cae00k8a4xv0k" path="res://Enemy/robot_model.gltf" id="3_vso2s"]
 [ext_resource type="Script" uid="uid://dcxy7f642g8ur" path="res://Enemy/enemyModel.gd" id="4_fkela"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_2rcc8"]
-size = Vector3(2.4, 2.9, 1.4)
+[ext_resource type="Script" uid="uid://coh4h88ophj2g" path="res://Components/attackbox_component.gd" id="4_vso2s"]
+[ext_resource type="Script" uid="uid://by2kl8xdwu0hs" path="res://Components/hitbox_component.gd" id="5_d2k2y"]
+[ext_resource type="Script" uid="uid://bu8foyn0ppobj" path="res://Components/health_component.gd" id="6_jd4ap"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xeo28"]
-size = Vector3(2, 2.9, 1)
+size = Vector3(2, 3.901172, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vm0tb"]
 radius = 7.3336196
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_nfqi3"]
-radius = 1.8999062
+[sub_resource type="SphereShape3D" id="SphereShape3D_vso2s"]
+radius = 1.8
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1821107149]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_3homo")
-
-[node name="Killzone" parent="." unique_id=388224691 instance=ExtResource("1_jj8qi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone" unique_id=500040125]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099999964, 0.45000005, -5.9604645e-08)
-shape = SubResource("BoxShape3D_2rcc8")
+attack_cooldown = 1.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=939069037]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08886713, 1.45, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08886713, 1.950586, 0)
 shape = SubResource("BoxShape3D_xeo28")
 
 [node name="blockbench_export" parent="." unique_id=2095166104 instance=ExtResource("3_vso2s")]
@@ -49,11 +42,37 @@ debug_color = Color(1, 1, 0.69803923, 0.41960785)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4294147, 0)
 target_position = Vector3(0, 0, -20)
 
-[node name="YesYesZone" type="Area3D" parent="." unique_id=92344695]
+[node name="AttackBoxComponent" type="Area3D" parent="." unique_id=112573358]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("4_vso2s")
+attack_cooldown = 1.0
+metadata/_custom_type_script = "uid://coh4h88ophj2g"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="YesYesZone" unique_id=1202953821]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AttackBoxComponent" unique_id=162525888]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.219969, 0)
-shape = SubResource("SphereShape3D_nfqi3")
+shape = SubResource("SphereShape3D_vso2s")
+
+[node name="HitBoxComponent" type="Area3D" parent="." unique_id=34724046 node_paths=PackedStringArray("health_component")]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("5_d2k2y")
+health_component = NodePath("../HealthComponent")
+metadata/_custom_type_script = "uid://by2kl8xdwu0hs"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBoxComponent" unique_id=137196883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08886713, 1.950586, 0)
+shape = SubResource("BoxShape3D_xeo28")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1370151948]
+script = ExtResource("6_jd4ap")
+max_health = 2
+metadata/_custom_type_script = "uid://bu8foyn0ppobj"
 
 [connection signal="body_entered" from="NoNoZone" to="." method="_on_no_no_zone_body_entered"]
 [connection signal="body_exited" from="NoNoZone" to="." method="_on_no_no_zone_body_exited"]
+[connection signal="attack" from="AttackBoxComponent" to="." method="_on_attack_box_component_attack"]
+[connection signal="hitbox_entered" from="AttackBoxComponent" to="." method="_on_attack_box_component_hitbox_entered"]
+[connection signal="hitbox_exited" from="AttackBoxComponent" to="." method="_on_attack_box_component_hitbox_exited"]
+[connection signal="current_health_changed" from="HealthComponent" to="." method="_on_health_component_current_health_changed"]
+[connection signal="die" from="HealthComponent" to="." method="_on_health_component_die"]

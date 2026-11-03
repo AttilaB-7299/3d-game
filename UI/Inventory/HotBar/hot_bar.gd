@@ -26,7 +26,8 @@ func _ready() -> void:
 	sbf.border_width_bottom = 2
 	the_panel.add_theme_stylebox_override("panel", sbf)
 
-	player.pickup_item_hotbar.connect(_update_slot_icon)
+	if !Engine.is_editor_hint(): # I was getting an error
+		player.pickup_item_hotbar.connect(_update_slot_icon)
 
 func _process(_delta: float) -> void:
 	if !Engine.is_editor_hint():
