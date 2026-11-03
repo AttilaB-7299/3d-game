@@ -1,11 +1,6 @@
 extends CharacterBody3D
 class_name Player
 
-# signal took_damage
-signal pickup_item(item: Item)
-signal pickup_item_hotbar(index: int)
-signal pickup_item_hidden(index: int)
-
 @onready var health_component: HealthComponent = $HealthComponent
 @onready var hitbox_component: HitBoxComponent = $HitBoxComponent
 @onready var attackbox_component: AttackBoxComponent = $AttackBoxComponent
@@ -66,28 +61,19 @@ func _handle_horazontal_movement(move_speed: float):
 	velocity.x = direction.x * move_speed
 	velocity.z = direction.z * move_speed
 
-# This function should be called in a State
+## This function should be called in a State
 func _handle_gravity(delta: float, grav_mult):
 	velocity += get_gravity() * delta * grav_mult
 	pass
 
 
-# adds item to inventory if there is space
+## adds item to inventory if there is space
 func attempt_pickup_item(item: Item) -> bool: # TODO: make items stackable
-	for i in range(hotbarInv.vals.size()):
-		if !hotbarInv.vals.get(i):
-			hotbarInv.vals.set(i, item)
-			pickup_item.emit(item)
-			pickup_item_hotbar.emit(i)
-			return true
-	
-	for i in range(hiddenInv.vals.size()):
-		if !hiddenInv.vals.get(i):
-			hiddenInv.vals.set(i, item)
-			pickup_item.emit(item)
-			pickup_item_hidden.emit(i)
-			return true
-	
+	if hotbarInv.attempt_add_item(item):
+		return true
+	if hiddenInv.attempt_add_item(item):
+		return true
+
 	return false
 	
 

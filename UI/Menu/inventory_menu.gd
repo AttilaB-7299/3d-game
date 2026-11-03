@@ -78,14 +78,23 @@ func add_hotbar_items():
 		panel.add_child(area)
 		area.add_child(coll_shape)
 
-		if player_hotbar_inv.vals.get(i): # TODO: add this code to hidden items
-			var curr_item: Item = player_hotbar_inv.vals.get(i)
+		if player_hotbar_inv.get_item(i): # TODO: add this code to hidden items
+			var curr_item: Item = player_hotbar_inv.get_item(i)
 			var texture_rect := TextureRect.new()
 			texture_rect.texture = curr_item.icon
 			texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			texture_rect.size = panel.size - Vector2.ONE * 10
 			texture_rect.position = (panel.size - texture_rect.size) / 2
+
+			var item_count := player_hotbar_inv.get_item_count(i)
+			var label := Label.new()
+			label.position = panel.size * 0.5 + Vector2(14, 0)
+			label.add_theme_font_size_override("font_size", 20)
+			if item_count > 1:
+				label.text = str(item_count)
+
 			panel.add_child(texture_rect)
+			panel.add_child(label)
 
 func add_signals_to_item(area: Area2D, panel: Panel):
 	area.mouse_entered.connect(func():
