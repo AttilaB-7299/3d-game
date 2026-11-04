@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://coh4h88ophj2g" path="res://Components/attackbox_component.gd" id="4_vso2s"]
 [ext_resource type="Script" uid="uid://by2kl8xdwu0hs" path="res://Components/hitbox_component.gd" id="5_d2k2y"]
 [ext_resource type="Script" uid="uid://bu8foyn0ppobj" path="res://Components/health_component.gd" id="6_jd4ap"]
+[ext_resource type="PackedScene" uid="uid://uxs3m7phqff7" path="res://Enemy/enemy_health_bar.tscn" id="7_jd4ap"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xeo28"]
 size = Vector3(2, 3.901172, 1)
@@ -15,6 +16,9 @@ radius = 7.3336196
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vso2s"]
 radius = 1.8
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vm0tb"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1821107149]
 collision_layer = 3
@@ -68,6 +72,17 @@ shape = SubResource("BoxShape3D_xeo28")
 script = ExtResource("6_jd4ap")
 max_health = 2
 metadata/_custom_type_script = "uid://bu8foyn0ppobj"
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=62524198]
+transparent_bg = true
+
+[node name="EnemyHealthBar" parent="SubViewport" unique_id=1319998501 node_paths=PackedStringArray("health_component") instance=ExtResource("7_jd4ap")]
+health_component = NodePath("../../HealthComponent")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=128660078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1685057, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_vm0tb")
 
 [connection signal="body_entered" from="NoNoZone" to="." method="_on_no_no_zone_body_entered"]
 [connection signal="body_exited" from="NoNoZone" to="." method="_on_no_no_zone_body_exited"]

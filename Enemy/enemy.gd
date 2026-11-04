@@ -36,7 +36,7 @@ func _physics_process(_delta: float) -> void:
 		States.CHASING:
 			handle_chasing_state(_delta)
 		States.ATTACKING:
-			handle_attacking_state()
+			handle_attacking_state(_delta)
 	move_and_slide()
 
 
@@ -63,7 +63,7 @@ func handle_chasing_state(delta: float):
 	rotation.x = 0
 	position = position.move_toward(player.position, delta * speed)
 
-func handle_attacking_state():
+func handle_attacking_state(delta: float):
 	pass
 	# if attackbox_component.can_attack:
 	# 	blockbench_export._playAnim("stab")
