@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 15.0
 const JUMP_VELOCITY = 4.5
 var sens = 0.5
 @onready var pivot: Camera3D = $Camera3D
@@ -13,12 +13,12 @@ func _input(event):
 		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
-		velocity.y = JUMP_VELOCITY
+		position.y += JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

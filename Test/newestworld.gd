@@ -1,6 +1,6 @@
 extends Node3D
 
-const CHUNK_SIZE = 16
+const CHUNK_SIZE = 2
 const CHUNK_AMOUNT = 16
 
 var noise: FastNoiseLite
