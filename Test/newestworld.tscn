@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dprismyynwcd1"]
+
+[ext_resource type="Script" uid="uid://b4ir3j1vud6q7" path="res://Test/newestworld.gd" id="1_73c6g"]
+[ext_resource type="PackedScene" uid="uid://cx14jxb8nqnfu" path="res://Test/test_player.tscn" id="2_73c6g"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_73c6g"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_thr5e"]
+sky_material = SubResource("ProceduralSkyMaterial_73c6g")
+
+[sub_resource type="Environment" id="Environment_oye0k"]
+background_mode = 2
+sky = SubResource("Sky_thr5e")
+glow_enabled = true
+
+[node name="newESTworld" type="Node3D" unique_id=1272153202]
+script = ExtResource("1_73c6g")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1771617346]
+environment = SubResource("Environment_oye0k")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1743682862]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="TESTPlayer" parent="." unique_id=1819951902 instance=ExtResource("2_73c6g")]

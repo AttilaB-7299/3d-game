@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfcvm66b6xlyn"
-path="res://.godot/imported/Petal_2.gltf-25998c67cd1bf3bcacfa1f7b7c560cd6.scn"
+path="res://.godot/imported/Petal_2.gltf-21005cf765f350e28d9c9acb96d148c1.scn"
 
 [deps]
 
-source_file="res://addons/glTF/Petal_2.gltf"
-dest_files=["res://.godot/imported/Petal_2.gltf-25998c67cd1bf3bcacfa1f7b7c560cd6.scn"]
+source_file="res://Addons/glTF/Petal_2.gltf"
+dest_files=["res://.godot/imported/Petal_2.gltf-21005cf765f350e28d9c9acb96d148c1.scn"]
 
 [params]
 

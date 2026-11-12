@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://bgbixcgl7gwyy"
-path="res://.godot/imported/Flower_3_Single.obj-d209f64d0ebfdf02405e56653b9e85b7.mesh"
+path="res://.godot/imported/Flower_3_Single.obj-41d8ca413759709f13746f2431d25a56.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Flower_3_Single.obj-d209f64d0ebfdf02405e56653b9e85b7.mesh"]
+files=["res://.godot/imported/Flower_3_Single.obj-41d8ca413759709f13746f2431d25a56.mesh"]
 
-source_file="res://addons/OBJ/Flower_3_Single.obj"
-dest_files=["res://.godot/imported/Flower_3_Single.obj-d209f64d0ebfdf02405e56653b9e85b7.mesh", "res://.godot/imported/Flower_3_Single.obj-d209f64d0ebfdf02405e56653b9e85b7.mesh"]
+source_file="res://Addons/OBJ/Flower_3_Single.obj"
+dest_files=["res://.godot/imported/Flower_3_Single.obj-41d8ca413759709f13746f2431d25a56.mesh", "res://.godot/imported/Flower_3_Single.obj-41d8ca413759709f13746f2431d25a56.mesh"]
 
 [params]
 

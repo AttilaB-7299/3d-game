@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dn78he4vlv1ff"
-path="res://.godot/imported/Fern_1.gltf-5d2abd604eb146b4a1a564948f0232bd.scn"
+path="res://.godot/imported/Fern_1.gltf-eaff9c1f333b224481066f858700d782.scn"
 
 [deps]
 
-source_file="res://addons/glTF/Fern_1.gltf"
-dest_files=["res://.godot/imported/Fern_1.gltf-5d2abd604eb146b4a1a564948f0232bd.scn"]
+source_file="res://Addons/glTF/Fern_1.gltf"
+dest_files=["res://.godot/imported/Fern_1.gltf-eaff9c1f333b224481066f858700d782.scn"]
 
 [params]
 

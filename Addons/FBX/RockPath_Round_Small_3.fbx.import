@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cc7xqwvwgeeq4"
-path="res://.godot/imported/RockPath_Round_Small_3.fbx-117c227e5d3cd2d5d257040b9b6d5ca5.scn"
+path="res://.godot/imported/RockPath_Round_Small_3.fbx-0a4038d5d9863fb475c8e831d8f7854b.scn"
 
 [deps]
 
-source_file="res://addons/FBX/RockPath_Round_Small_3.fbx"
-dest_files=["res://.godot/imported/RockPath_Round_Small_3.fbx-117c227e5d3cd2d5d257040b9b6d5ca5.scn"]
+source_file="res://Addons/FBX/RockPath_Round_Small_3.fbx"
+dest_files=["res://.godot/imported/RockPath_Round_Small_3.fbx-0a4038d5d9863fb475c8e831d8f7854b.scn"]
 
 [params]
 

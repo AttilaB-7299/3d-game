@@ -79,5 +79,3 @@ func attempt_pickup_item(item: Item) -> bool: # TODO: make items stackable
 
 func _on_health_component_die():
 	get_tree().call_deferred("reload_current_scene")
-
-

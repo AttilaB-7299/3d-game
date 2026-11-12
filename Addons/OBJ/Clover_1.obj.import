@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cjx0nrkgmd0uy"
-path="res://.godot/imported/Clover_1.obj-d02775a5936fb7fdbac6f9dc0b67ea89.mesh"
+path="res://.godot/imported/Clover_1.obj-e4ec6e1d4847671c2872d8e9623587c9.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Clover_1.obj-d02775a5936fb7fdbac6f9dc0b67ea89.mesh"]
+files=["res://.godot/imported/Clover_1.obj-e4ec6e1d4847671c2872d8e9623587c9.mesh"]
 
-source_file="res://addons/OBJ/Clover_1.obj"
-dest_files=["res://.godot/imported/Clover_1.obj-d02775a5936fb7fdbac6f9dc0b67ea89.mesh", "res://.godot/imported/Clover_1.obj-d02775a5936fb7fdbac6f9dc0b67ea89.mesh"]
+source_file="res://Addons/OBJ/Clover_1.obj"
+dest_files=["res://.godot/imported/Clover_1.obj-e4ec6e1d4847671c2872d8e9623587c9.mesh", "res://.godot/imported/Clover_1.obj-e4ec6e1d4847671c2872d8e9623587c9.mesh"]
 
 [params]
 

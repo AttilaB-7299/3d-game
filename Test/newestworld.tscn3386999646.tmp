@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dprismyynwcd1"]
+
+[ext_resource type="Script" uid="uid://b4ir3j1vud6q7" path="res://Test/newestworld.gd" id="1_73c6g"]
+[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="2_thr5e"]
+
+[node name="newESTworld" type="Node3D" unique_id=1272153202]
+script = ExtResource("1_73c6g")
+
+[node name="Player" parent="." unique_id=153155451 instance=ExtResource("2_thr5e")]
