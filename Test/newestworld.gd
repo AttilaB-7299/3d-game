@@ -8,13 +8,14 @@ var noise: FastNoiseLite
 var chunks = {}
 var unready_chunks = {}
 var should_remove = true
+
 func _ready():
 	noise = FastNoiseLite.new()
 	noise.seed = randi()
 	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
 	noise.fractal_type = FastNoiseLite.FRACTAL_FBM
-	noise.fractal_octaves = 2 #height 
-	noise.frequency = 0.002 #hills and valleys
+	noise.fractal_octaves = 3 # Height layers
+	noise.frequency = 0.005 # Hills and valleys
 
 func add_chunk(x: int, z: int):
 	var key = "%d,%d" % [x, z]
@@ -22,27 +23,38 @@ func add_chunk(x: int, z: int):
 		return
 	
 	unready_chunks[key] = true
-	# WorkerThreadPool runs tasks across multiple CPU cores automatically
-	WorkerThreadPool.add_task(load_chunk.bind(x, z, key))
+	WorkerThreadPool.add_task(generate_chunk_data.bind(x, z, key))
 
-func load_chunk(x: int, z: int, key: String):
-	var chunk = Chunk.new(noise, x * CHUNK_SIZE, z * CHUNK_SIZE, CHUNK_SIZE)
-	chunk.position = Vector3(x * CHUNK_SIZE, 0, z * CHUNK_SIZE)
+func generate_chunk_data(x: int, z: int, key: String):
+	# 1. Pure data calculation (Safe on worker thread)
+	var subdivisions := int(CHUNK_SIZE * 0.5)
+	var verts_per_side := subdivisions + 2
+	var map_data := PackedFloat32Array()
+	map_data.resize(verts_per_side * verts_per_side)
 	
-	call_deferred("load_done", chunk, key)
+	var half_size := CHUNK_SIZE * 0.5
+	var step := float(CHUNK_SIZE) / float(verts_per_side - 1)
+	
+	var idx := 0
+	var world_x_origin = x * CHUNK_SIZE
+	var world_z_origin = z * CHUNK_SIZE
+	
+	for row in range(verts_per_side):
+		var local_z := -half_size + (row * step)
+		for col in range(verts_per_side):
+			var local_x := -half_size + (col * step)
+			map_data[idx] = noise.get_noise_2d(local_x + world_x_origin, local_z + world_z_origin) * 35.0
+			idx += 1
+			
+	call_deferred("spawn_chunk", x, z, key, map_data, verts_per_side, step)
 
-func load_done(chunk: Node3D, key: String):
+func spawn_chunk(x: int, z: int, key: String, map_data: PackedFloat32Array, verts_per_side: int, step: float):
+	var chunk = Chunk.new(noise, x * CHUNK_SIZE, z * CHUNK_SIZE, CHUNK_SIZE, map_data, verts_per_side, step)
+	chunk.position = Vector3(x * CHUNK_SIZE, 0, z * CHUNK_SIZE)
 	add_child(chunk)
 	chunk.should_remove = false
 	chunks[key] = chunk
 	unready_chunks.erase(key)
-
-
-#func _process(_delta: float) -> void:
-	#update_chunks()
-	#clean_up_chunks()
-	#reset_chunks()
-#var last_chunk_pos := Vector2i(999999, 999999)
 
 func _process(_delta: float) -> void:
 	var player_pos = $Player.position
@@ -51,7 +63,6 @@ func _process(_delta: float) -> void:
 		floori(player_pos.z / CHUNK_SIZE)
 	)
 	
-	# Only recalculate chunks when the player enters a new chunk
 	if current_chunk_pos != last_chunk_pos:
 		last_chunk_pos = current_chunk_pos
 		update_chunks(current_chunk_pos.x, current_chunk_pos.y)
@@ -59,11 +70,6 @@ func _process(_delta: float) -> void:
 		reset_chunks()
 
 func update_chunks(p_x, p_z):
-	var player_pos = $Player.position
-	# floori prevents duplicate chunks when crossing 0 into negative coordinates
-	#var p_x = floori(player_pos.x / CHUNK_SIZE)
-	#var p_z = floori(player_pos.z / CHUNK_SIZE)
-	
 	var half_amount = int(CHUNK_AMOUNT * 0.5)
 	for x in range(p_x - half_amount, p_x + half_amount):
 		for z in range(p_z - half_amount, p_z + half_amount):
@@ -86,8 +92,7 @@ func clean_up_chunks():
 func reset_chunks():
 	for key in chunks:
 		chunks[key].should_remove = true
-		
-	pass
+
 func get_chunk(x: int, z: int) -> Chunk:
 	var key = "%d,%d" % [x, z]
 	return chunks.get(key, null)
