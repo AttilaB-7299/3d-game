@@ -58,7 +58,7 @@ func spawn_chunk(x: int, z: int, key: String, map_data: PackedFloat32Array, vert
 	unready_chunks.erase(key)
 
 func _process(_delta: float) -> void:
-	var player_pos = $TESTPlayer.position
+	var player_pos = $Player.position
 	var current_chunk_pos = Vector2i(
 		floori(player_pos.x / CHUNK_SIZE),
 		floori(player_pos.z / CHUNK_SIZE)
