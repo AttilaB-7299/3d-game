@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bl2s21vaa0lia"]
+
+[ext_resource type="ArrayMesh" uid="uid://cw0m41b656vta" path="res://Meshes/grass.tres" id="1_57xr8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k3eg"]
+albedo_color = Color(0.16470589, 0.72156864, 0.22745098, 1)
+
+[node name="Grass" type="MeshInstance3D" unique_id=1000106079]
+mesh = ExtResource("1_57xr8")
+surface_material_override/0 = SubResource("StandardMaterial3D_2k3eg")

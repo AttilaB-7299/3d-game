@@ -1,6 +1,6 @@
 extends State
 
-@export var move_speed := 10.0
+@export var move_speed := 25.0
 @onready var blockbench_export: Node3D = $"../../blockbench_export"
 
 func _state_physics_process(_delta: float) -> void:

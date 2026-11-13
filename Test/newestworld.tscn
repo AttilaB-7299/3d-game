@@ -18,11 +18,12 @@ glow_enabled = true
 [node name="newESTworld" type="Node3D" unique_id=1272153202]
 script = ExtResource("1_73c6g")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1877968922]
+transform = Transform3D(-0.6414496, -0.5022944, 0.57986444, 0, 0.7558535, 0.65474087, -0.76716524, 0.41998324, -0.48484185, 0, 482.33655, 0)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1771617346]
 environment = SubResource("Environment_oye0k")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1743682862]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
-
 [node name="Player" parent="." unique_id=153155451 instance=ExtResource("2_thr5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 43.59005, 0)

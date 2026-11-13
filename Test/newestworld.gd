@@ -13,10 +13,11 @@ const chunk_scene = preload("res://Test/chunk.tscn")
 func _ready():
 	noise = FastNoiseLite.new()
 	noise.seed = randi()
-	noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+	noise.noise_type = FastNoiseLite.TYPE_PERLIN
+	noise.fractal_lacunarity = -2.2
 	noise.fractal_type = FastNoiseLite.FRACTAL_FBM
-	noise.fractal_octaves = 3 # Height layers
-	noise.frequency = 0.005 # Hills and valleys
+	noise.fractal_octaves = 1 # Height layers
+	noise.frequency = 0.004 # Hills and valleys
 
 func add_chunk(x: int, z: int):
 	var key = "%d,%d" % [x, z]

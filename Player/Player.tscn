@@ -20,13 +20,13 @@
 [ext_resource type="Script" uid="uid://coh4h88ophj2g" path="res://Components/attackbox_component.gd" id="19_d7xyo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2k3eg"]
-size = Vector3(0.7119873, 0.71954346, 0.741272)
+size = Vector3(2.8665955, 2.0572662, 2.5766754)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d7xyo"]
-size = Vector3(0.7119873, 2.6376162, 0.741272)
+size = Vector3(2.8527267, 7.3743696, 2.0355377)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_evw08"]
-size = Vector3(1, 2.5044632, 3.1723328)
+size = Vector3(1, 7.2917824, 3.1723328)
 
 [node name="Player" type="CharacterBody3D" unique_id=153155451 groups=["Player"]]
 collision_layer = 2
@@ -34,15 +34,15 @@ collision_mask = 7
 script = ExtResource("1_s0eop")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=192644074]
-transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.0010864437, 1.2715677, -0.07342532)
+transform = Transform3D(1, 0, 0, 0, 3.6267688, 0, 0, 0, 1, -0.054605126, 3.6973734, -0.074165374)
 shape = SubResource("BoxShape3D_2k3eg")
 
 [node name="blockbench_export" parent="." unique_id=470687339 instance=ExtResource("11_8nb7r")]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 script = ExtResource("12_wqc1t")
 
 [node name="PlayerCamera" parent="." unique_id=1482453457 node_paths=PackedStringArray("player") instance=ExtResource("3_ijhft")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022306621, 1.9962568, 0.43068147)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.022306621, 7.3157086, 0.43068147)
 player = NodePath("..")
 fov_change_speed = 3
 
@@ -108,7 +108,7 @@ health_component = NodePath("../HealthComponent")
 metadata/_custom_type_script = "uid://by2kl8xdwu0hs"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBoxComponent" unique_id=1699959410]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046649933, 3.668377, 0.12372589)
 shape = SubResource("BoxShape3D_d7xyo")
 
 [node name="AttackBoxComponent" type="Area3D" parent="." unique_id=1526473807]
@@ -119,7 +119,7 @@ attack_cooldown = 0.1
 metadata/_custom_type_script = "uid://coh4h88ophj2g"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackBoxComponent" unique_id=6825725]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3418617, -2.0057423)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7355213, -2.0057423)
 shape = SubResource("BoxShape3D_evw08")
 
 [connection signal="die" from="HealthComponent" to="." method="_on_health_component_die"]
