@@ -4,6 +4,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c2vtgiyslrixt" path="res://Meshes/bushWithFlowers.res" id="2_cqq8t"]
 [ext_resource type="ArrayMesh" uid="uid://lx42d22w8kkf" path="res://Meshes/fern.tres" id="3_re2od"]
 [ext_resource type="ArrayMesh" uid="uid://cw0m41b656vta" path="res://Meshes/grass.tres" id="4_clsrv"]
+[ext_resource type="ArrayMesh" uid="uid://dabdrsuv4jhny" path="res://Meshes/tree.tres" id="5_34vb5"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_2k3eg"]
 transform_format = 1
@@ -17,6 +18,11 @@ mesh = ExtResource("3_re2od")
 use_colors = true
 mesh = ExtResource("4_clsrv")
 
+[sub_resource type="MultiMesh" id="MultiMesh_77ha8"]
+transform_format = 1
+use_colors = true
+mesh = ExtResource("5_34vb5")
+
 [node name="Chunk" type="Node3D" unique_id=744819614]
 script = ExtResource("1_qo10f")
 
@@ -28,3 +34,6 @@ multimesh = SubResource("MultiMesh_8qdug")
 
 [node name="Grass" type="MultiMeshInstance3D" parent="." unique_id=567115139]
 multimesh = SubResource("MultiMesh_re2od")
+
+[node name="Trees" type="MultiMeshInstance3D" parent="." unique_id=29139488]
+multimesh = SubResource("MultiMesh_77ha8")

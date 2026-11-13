@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cu3qb5lth4erc"]
+
+[ext_resource type="ArrayMesh" uid="uid://b0pck1eh1tptd" path="res://Addons/OBJ/TwistedTree_5.obj" id="1_7gmcg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k3eg"]
+albedo_color = Color(0.59467113, 0.2609622, 0.10330709, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qdug"]
+albedo_color = Color(0.1254902, 0.5254902, 0, 1)
+
+[node name="Tree" type="Node3D" unique_id=1701970594]
+
+[node name="TreeModel" type="MeshInstance3D" parent="." unique_id=156494091]
+mesh = ExtResource("1_7gmcg")
+surface_material_override/0 = SubResource("StandardMaterial3D_2k3eg")
+surface_material_override/1 = SubResource("StandardMaterial3D_8qdug")

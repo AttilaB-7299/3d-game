@@ -51,6 +51,7 @@ func setup(_noise: FastNoiseLite, _x: int, _z: int, _chunk_size: int, map_data: 
 	generate_bushes(_noise, _x, _z, _chunk_size)
 	generate_ferns(_noise, _x, _z, _chunk_size)
 	generate_grass(_noise, _x, _z, _chunk_size)
+	#generate_trees(_noise, _x, _z, _chunk_size)
 	
 	var height_shape := HeightMapShape3D.new()
 	height_shape.map_width = verts_per_side
@@ -173,6 +174,44 @@ func generate_grass(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_s
 			
 			var scale_factor = 13.0#randf_range(20.0, 100.0)
 			t = t.scaled_local(Vector3(scale_factor, scale_factor-10.5, scale_factor))
+			
+			multimesh.set_instance_transform(placed, t)
+			placed += 1
+			
+	multimesh.visible_instance_count = placed
+func generate_trees(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_size: int) -> void:
+	var multimesh_inst = get_node_or_null("Trees")
+	if not multimesh_inst:
+		printerr("Trees node not found!")
+		return
+		
+	var multimesh = MultiMesh.new()
+	multimesh.transform_format = MultiMesh.TRANSFORM_3D
+	multimesh.mesh = multimesh_inst.multimesh.mesh if multimesh_inst.multimesh else null
+	multimesh_inst.multimesh = multimesh
+	#IDEAL COUNT IS 4000 AND SCALE 2.5
+	var instance_count = 1
+	multimesh.instance_count = instance_count
+	multimesh.custom_aabb = AABB(Vector3(-_chunk_size, -50.0, -_chunk_size), Vector3(_chunk_size * 2.0, 100.0, _chunk_size * 2.0))
+	
+	var half_size = _chunk_size * 0.5
+	var placed = 0
+	var attempts = 0
+	
+	while placed < instance_count and attempts < instance_count * 5:
+		attempts += 1
+		var local_x = randf_range(-half_size, half_size)
+		var local_z = randf_range(-half_size, half_size)
+		
+		var height = _noise.get_noise_2d(local_x + chunk_world_x, local_z + chunk_world_z) * 35.0
+		
+		if height > HEIGHT_MIN and height < HEIGHT_CAP:
+			var t = Transform3D()
+			t.origin = Vector3(local_x, height, local_z)
+			t = t.rotated_local(Vector3.UP, randf() * TAU)
+			
+			var scale_factor = 3.0#randf_range(20.0, 100.0)
+			t = t.scaled_local(Vector3(scale_factor, scale_factor, scale_factor))
 			
 			multimesh.set_instance_transform(placed, t)
 			placed += 1
