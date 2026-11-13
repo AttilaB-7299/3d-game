@@ -19,6 +19,17 @@ class_name Player
 @onready var hiddenInv: Inventory = $HiddenInv
 @onready var hotbarInv: Inventory = $HotbarInv
 
+@export var item_pickup_cooldown := 0.2
+var can_pickup_item := true:
+	set(val):
+		if val == false:
+			can_pickup_item = false
+			await get_tree().create_timer(item_pickup_cooldown).timeout
+			can_pickup_item = true
+		else:
+			can_pickup_item = true
+
+
 const pause_menu = preload("res://UI/Menu/pause_menu.tscn")
 
 var mouseSensitivity := 0.1
@@ -68,14 +79,26 @@ func _handle_gravity(delta: float, grav_mult):
 
 
 ## adds item to inventory if there is space
-func attempt_pickup_item(item: Item) -> bool: # TODO: make items stackable
+func attempt_pickup_item(item: Item) -> bool:
+	print_debug("ATTEMPT")
 	if hotbarInv.attempt_add_item(item):
+		await item.handle_transition(self)
 		return true
 	if hiddenInv.attempt_add_item(item):
+		await item.handle_transition(self)
 		return true
 
+	print_debug("INVENTORY FULL")
 	return false
 	
 
 func _on_health_component_die():
 	get_tree().call_deferred("reload_current_scene")
+
+
+func _on_hit_box_area_entered(area: Area3D):
+	print_debug("Area Entered")
+	if area is Item:
+		if can_pickup_item: # GOD HELP ME
+			attempt_pickup_item(area)
+			can_pickup_item = false
