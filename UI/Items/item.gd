@@ -11,12 +11,13 @@ class_name Item extends Area3D
 var pickup_coll_shape: CollisionShape3D
 
 func _ready() -> void:
-	set_collision_layer_value(1, true)
-	set_collision_layer_value(2, true)
-	set_collision_mask_value(1, true)
-	set_collision_mask_value(2, true)
+	# set_collision_layer_value(1, true)
+	# set_collision_layer_value(2, true)
+	# set_collision_mask_value(1, true)
+	# set_collision_mask_value(2, true)
+	set_collision_layer_value(3, true)
 
-	connect("body_entered", _on_body_entered)
+	# connect("body_entered", _on_body_entered)
 
 	pickup_coll_shape = CollisionShape3D.new()
 	pickup_coll_shape.shape = SphereShape3D.new()
@@ -58,26 +59,30 @@ func update_pickup_range(new_val: float):
 				break
 
 
-func _on_body_entered(body: Node3D) -> void:
-	if body is Player:
-		if body.attempt_pickup_item(self):
-			handle_item_pickup(body)
-			# print("ITEM COLLECTED")
-			# set_collision_layer_value(1, false)
-			# set_collision_layer_value(2, false)
-			# hide()
-			# pickup_coll_shape.disabled = true
-			# call_deferred("reparent", body)
-		else:
-			print_debug("INVENTORY FULL")
+# func _on_body_entered(body: Node3D) -> void:
+# 	if body is Player:
+# 		if body.attempt_pickup_item(self):
+# 			handle_item_pickup(body)
+# 			# print("ITEM COLLECTED")
+# 			# set_collision_layer_value(1, false)
+# 			# set_collision_layer_value(2, false)
+# 			# hide()
+# 			# pickup_coll_shape.disabled = true
+# 			# call_deferred("reparent", body)
+# 		else:
+# 			print_debug("INVENTORY FULL")
 
-func handle_item_pickup(player: Player):
+## hides item and makes item a child of player if that item is not allready a child of player
+func handle_transition(player: Player):
 	print("ITEM COLLECTED")
-	set_collision_layer_value(1, false)
-	set_collision_layer_value(2, false)
-	hide()
 	pickup_coll_shape.disabled = true
-	call_deferred("reparent", player)
+	hide()
 
+	for child in player.get_children():
+		if child is Item: # TODO: this might move later
+			if child.item_name == item_name:
+				print_debug("REMOVED")
+				queue_free()
+				return
 
-
+	call_deferred("reparent", player) # I DON'T KNOW WHY THIS NEEDS TO BE DEFERRED
