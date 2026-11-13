@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://8h438wqekkdo"]
 
 [ext_resource type="Script" uid="uid://b04bq6qb0hkce" path="res://Test/chunk.gd" id="1_qo10f"]
+[ext_resource type="ArrayMesh" uid="uid://c2vtgiyslrixt" path="res://Meshes/bushWithFlowers.res" id="2_cqq8t"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_2k3eg"]
+transform_format = 1
+use_colors = true
+mesh = ExtResource("2_cqq8t")
 
 [node name="Chunk" type="Node3D" unique_id=744819614]
 script = ExtResource("1_qo10f")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=5805245]
+multimesh = SubResource("MultiMesh_2k3eg")

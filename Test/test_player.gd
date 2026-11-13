@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 80.0
+const SPEED = 100.0
 const JUMP_VELOCITY = 4.5
 var sens = 0.5
 @onready var pivot: Camera3D = $Camera3D
@@ -19,7 +19,9 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
 		position.y += JUMP_VELOCITY
-
+		
+	if Input.is_action_just_pressed("fly down"):
+		position.y -= JUMP_VELOCITY
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("move left", "move right", "move forward", "move back")

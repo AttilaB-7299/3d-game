@@ -1,6 +1,6 @@
 extends Node3D
 
-const CHUNK_SIZE = 32
+const CHUNK_SIZE = 64
 const CHUNK_AMOUNT = 16
 var last_chunk_pos := Vector2i(999999, 999999) 
 
@@ -8,6 +8,7 @@ var noise: FastNoiseLite
 var chunks = {}
 var unready_chunks = {}
 var should_remove = true
+const chunk_scene = preload("res://Test/chunk.tscn")
 
 func _ready():
 	noise = FastNoiseLite.new()
@@ -26,7 +27,6 @@ func add_chunk(x: int, z: int):
 	WorkerThreadPool.add_task(generate_chunk_data.bind(x, z, key))
 
 func generate_chunk_data(x: int, z: int, key: String):
-	# 1. Pure data calculation (Safe on worker thread)
 	var subdivisions := int(CHUNK_SIZE * 0.5)
 	var verts_per_side := subdivisions + 2
 	var map_data := PackedFloat32Array()
@@ -49,15 +49,16 @@ func generate_chunk_data(x: int, z: int, key: String):
 	call_deferred("spawn_chunk", x, z, key, map_data, verts_per_side, step)
 
 func spawn_chunk(x: int, z: int, key: String, map_data: PackedFloat32Array, verts_per_side: int, step: float):
-	var chunk = Chunk.new(noise, x * CHUNK_SIZE, z * CHUNK_SIZE, CHUNK_SIZE, map_data, verts_per_side, step)
-	chunk.position = Vector3(x * CHUNK_SIZE, 0, z * CHUNK_SIZE)
+	var chunk = chunk_scene.instantiate()
+	chunk.position = Vector3(x * CHUNK_SIZE, 0, z * CHUNK_SIZE)	
 	add_child(chunk)
+	chunk.setup(noise, x * CHUNK_SIZE, z * CHUNK_SIZE, CHUNK_SIZE, map_data, verts_per_side, step)
 	chunk.should_remove = false
 	chunks[key] = chunk
 	unready_chunks.erase(key)
 
 func _process(_delta: float) -> void:
-	var player_pos = $Player.position
+	var player_pos = $TESTPlayer.position
 	var current_chunk_pos = Vector2i(
 		floori(player_pos.x / CHUNK_SIZE),
 		floori(player_pos.z / CHUNK_SIZE)
@@ -96,3 +97,4 @@ func reset_chunks():
 func get_chunk(x: int, z: int) -> Chunk:
 	var key = "%d,%d" % [x, z]
 	return chunks.get(key, null)
+	
