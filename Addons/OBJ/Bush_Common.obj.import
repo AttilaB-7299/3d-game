@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://cxj2a6hv662lg"
-path="res://.godot/imported/Bush_Common.obj-a869c79d4c70c9ece19d46c7bda97f8b.mesh"
+path="res://.godot/imported/Bush_Common.obj-91d9e9846295596e586db5e9a9a79db1.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Bush_Common.obj-a869c79d4c70c9ece19d46c7bda97f8b.mesh"]
+files=["res://.godot/imported/Bush_Common.obj-91d9e9846295596e586db5e9a9a79db1.mesh"]
 
-source_file="res://addons/OBJ/Bush_Common.obj"
-dest_files=["res://.godot/imported/Bush_Common.obj-a869c79d4c70c9ece19d46c7bda97f8b.mesh", "res://.godot/imported/Bush_Common.obj-a869c79d4c70c9ece19d46c7bda97f8b.mesh"]
+source_file="res://Addons/OBJ/Bush_Common.obj"
+dest_files=["res://.godot/imported/Bush_Common.obj-91d9e9846295596e586db5e9a9a79db1.mesh", "res://.godot/imported/Bush_Common.obj-91d9e9846295596e586db5e9a9a79db1.mesh"]
 
 [params]
 

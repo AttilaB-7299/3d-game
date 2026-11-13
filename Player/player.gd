@@ -96,7 +96,6 @@ func _on_health_component_die():
 	get_tree().call_deferred("reload_current_scene")
 
 
-
 func _on_hit_box_area_entered(area: Area3D):
 	print_debug("Area Entered")
 	if area is Item:

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c1wj1kgy0ofv6"
-path="res://.godot/imported/Plant_1_Big.gltf-119b9aa8a1f12ee573502430957d2d3e.scn"
+path="res://.godot/imported/Plant_1_Big.gltf-13c9c93e1ac2b6a9461d92ed318fc83f.scn"
 
 [deps]
 
-source_file="res://addons/glTF/Plant_1_Big.gltf"
-dest_files=["res://.godot/imported/Plant_1_Big.gltf-119b9aa8a1f12ee573502430957d2d3e.scn"]
+source_file="res://Addons/glTF/Plant_1_Big.gltf"
+dest_files=["res://.godot/imported/Plant_1_Big.gltf-13c9c93e1ac2b6a9461d92ed318fc83f.scn"]
 
 [params]
 

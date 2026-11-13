@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnyjr68v81d3k"
-path="res://.godot/imported/lower.svg-4ec9c216dafb77f2bc27df5511285ae9.ctex"
+path="res://.godot/imported/lower.svg-7bf95e9a2925440df9c004c15e6fbdad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/lowpolyterrain/icons/lower.svg"
-dest_files=["res://.godot/imported/lower.svg-4ec9c216dafb77f2bc27df5511285ae9.ctex"]
+source_file="res://Addons/lowpolyterrain/icons/lower.svg"
+dest_files=["res://.godot/imported/lower.svg-7bf95e9a2925440df9c004c15e6fbdad.ctex"]
 
 [params]
 

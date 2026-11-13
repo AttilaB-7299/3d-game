@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://mwmjrugxwp20"
-path="res://.godot/imported/Bush_Common.fbx-327cd2fb9df78a7480da9f3c99e98955.scn"
+path="res://.godot/imported/Bush_Common.fbx-45486ec1ceedbd145d556a40e1d0dda4.scn"
 
 [deps]
 
-source_file="res://addons/FBX/Bush_Common.fbx"
-dest_files=["res://.godot/imported/Bush_Common.fbx-327cd2fb9df78a7480da9f3c99e98955.scn"]
+source_file="res://Addons/FBX/Bush_Common.fbx"
+dest_files=["res://.godot/imported/Bush_Common.fbx-45486ec1ceedbd145d556a40e1d0dda4.scn"]
 
 [params]
 

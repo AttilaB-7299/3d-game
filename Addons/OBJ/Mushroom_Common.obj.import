@@ -4,14 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://d1jj1l85scill"
-path="res://.godot/imported/Mushroom_Common.obj-aad196b1c2e4029fc72a314de1b3d0b9.mesh"
+path="res://.godot/imported/Mushroom_Common.obj-5b061d6173f472c1316b50be56727fe8.mesh"
 
 [deps]
 
-files=["res://.godot/imported/Mushroom_Common.obj-aad196b1c2e4029fc72a314de1b3d0b9.mesh"]
+files=["res://.godot/imported/Mushroom_Common.obj-5b061d6173f472c1316b50be56727fe8.mesh"]
 
-source_file="res://addons/OBJ/Mushroom_Common.obj"
-dest_files=["res://.godot/imported/Mushroom_Common.obj-aad196b1c2e4029fc72a314de1b3d0b9.mesh", "res://.godot/imported/Mushroom_Common.obj-aad196b1c2e4029fc72a314de1b3d0b9.mesh"]
+source_file="res://Addons/OBJ/Mushroom_Common.obj"
+dest_files=["res://.godot/imported/Mushroom_Common.obj-5b061d6173f472c1316b50be56727fe8.mesh", "res://.godot/imported/Mushroom_Common.obj-5b061d6173f472c1316b50be56727fe8.mesh"]
 
 [params]
 
