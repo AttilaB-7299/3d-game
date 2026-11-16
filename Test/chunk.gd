@@ -51,7 +51,7 @@ func setup(_noise: FastNoiseLite, _x: int, _z: int, _chunk_size: int, map_data: 
 	generate_bushes(_noise, _x, _z, _chunk_size)
 	generate_ferns(_noise, _x, _z, _chunk_size)
 	generate_grass(_noise, _x, _z, _chunk_size)
-	#generate_trees(_noise, _x, _z, _chunk_size)
+	generate_trees(_noise, _x, _z, _chunk_size)
 	
 	var height_shape := HeightMapShape3D.new()
 	height_shape.map_width = verts_per_side
@@ -152,7 +152,7 @@ func generate_grass(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_s
 	multimesh.mesh = multimesh_inst.multimesh.mesh if multimesh_inst.multimesh else null
 	multimesh_inst.multimesh = multimesh
 	#IDEAL COUNT IS 4000 AND SCALE 2.5
-	var instance_count = 800
+	var instance_count = 300
 	multimesh.instance_count = instance_count
 	multimesh.custom_aabb = AABB(Vector3(-_chunk_size, -50.0, -_chunk_size), Vector3(_chunk_size * 2.0, 100.0, _chunk_size * 2.0))
 	
@@ -160,7 +160,7 @@ func generate_grass(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_s
 	var placed = 0
 	var attempts = 0
 	
-	while placed < instance_count and attempts < instance_count * 5:
+	while placed < instance_count and attempts < instance_count * 3:
 		attempts += 1
 		var local_x = randf_range(-half_size, half_size)
 		var local_z = randf_range(-half_size, half_size)
@@ -172,8 +172,8 @@ func generate_grass(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_s
 			t.origin = Vector3(local_x, height, local_z)
 			t = t.rotated_local(Vector3.UP, randf() * TAU)
 			
-			var scale_factor = 13.0#randf_range(20.0, 100.0)
-			t = t.scaled_local(Vector3(scale_factor, scale_factor-10.5, scale_factor))
+			var scale_factor = 20.0#randf_range(20.0, 100.0)#
+			t = t.scaled_local(Vector3(scale_factor, 3.5, scale_factor))
 			
 			multimesh.set_instance_transform(placed, t)
 			placed += 1
@@ -189,7 +189,6 @@ func generate_trees(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_s
 	multimesh.transform_format = MultiMesh.TRANSFORM_3D
 	multimesh.mesh = multimesh_inst.multimesh.mesh if multimesh_inst.multimesh else null
 	multimesh_inst.multimesh = multimesh
-	#IDEAL COUNT IS 4000 AND SCALE 2.5
 	var instance_count = 1
 	multimesh.instance_count = instance_count
 	multimesh.custom_aabb = AABB(Vector3(-_chunk_size, -50.0, -_chunk_size), Vector3(_chunk_size * 2.0, 100.0, _chunk_size * 2.0))
@@ -217,3 +216,13 @@ func generate_trees(_noise, chunk_world_x: float, chunk_world_z: float, _chunk_s
 			placed += 1
 			
 	multimesh.visible_instance_count = placed
+	var tree_shape = CapsuleShape3D.new()#multimesh.mesh.create_convex_shape() 
+	for i in range(placed):
+		var static_body = StaticBody3D.new()
+		var collision_shape = CollisionShape3D.new()
+		
+		collision_shape.shape = tree_shape
+		static_body.transform = multimesh.get_instance_transform(i)
+		
+		static_body.add_child(collision_shape)
+		multimesh_inst.add_child(static_body)
