@@ -66,6 +66,7 @@ state_name = "run"
 
 [node name="JumpState" type="Node" parent="StateMachine" unique_id=845321404]
 script = ExtResource("11_gjv6x")
+jump_velocity = 10.0
 state_name = "jump"
 
 [node name="AttackState" type="Node" parent="StateMachine" unique_id=118654440 node_paths=PackedStringArray("attack_box")]

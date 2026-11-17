@@ -15,6 +15,10 @@ func _enter() -> void:
 		handle_jumping()
 
 func _state_physics_process(_delta: float) -> void:
+	if (state_machine.previous_state.state_name == "run"):
+		move_speed = 25
+	else:
+		move_speed = 10
 	parent._handle_horazontal_movement(move_speed)
 	parent._handle_gravity(_delta, gravity_multiplier)
 

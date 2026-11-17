@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://50rb8rg3vyyw"]
+
+[ext_resource type="ArrayMesh" uid="uid://ncwdwt6ggod5" path="res://Addons/OBJ/Plant_7_Big.obj" id="1_if7u2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2voi"]
+albedo_color = Color(0.01682414, 0.4324808, 0.07535633, 1)
+
+[node name="leaves" type="MeshInstance3D" unique_id=1273990160]
+material_override = SubResource("StandardMaterial3D_k2voi")
+mesh = ExtResource("1_if7u2")

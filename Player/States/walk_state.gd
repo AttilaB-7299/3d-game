@@ -6,7 +6,7 @@ extends State
 #@onready var blockbench_export_5: Node3D = $"../../KnightModel/blockbench_export5"
 #@onready var blockbench_export_6: Node3D = $"../../KnightModel/blockbench_export6"
 #@onready var blockbench_export_7: Node3D = $"../../KnightModel/blockbench_export7"
-@export var move_speed := 5.0
+@export var move_speed := 10.0
 @onready var blockbench_export: Node3D = $"../../blockbench_export"
 
 func _enter() -> void:

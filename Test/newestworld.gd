@@ -16,8 +16,8 @@ func _ready():
 	noise.noise_type = FastNoiseLite.TYPE_PERLIN
 	noise.fractal_lacunarity = -2.2
 	noise.fractal_type = FastNoiseLite.FRACTAL_FBM
-	noise.fractal_octaves = 1 # Height layers
-	noise.frequency = 0.004 # Hills and valleys
+	noise.fractal_octaves = 1#1 # Height layers
+	noise.frequency = 0.01 # Hills and valleys
 
 func add_chunk(x: int, z: int):
 	var key = "%d,%d" % [x, z]
@@ -29,7 +29,7 @@ func add_chunk(x: int, z: int):
 
 func generate_chunk_data(x: int, z: int, key: String):
 	var subdivisions := int(CHUNK_SIZE * 0.5)
-	var verts_per_side := subdivisions + 2
+	var verts_per_side := 4#subdivisions -29#+ 2
 	var map_data := PackedFloat32Array()
 	map_data.resize(verts_per_side * verts_per_side)
 	
