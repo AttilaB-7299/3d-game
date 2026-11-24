@@ -10,7 +10,6 @@ class_name Player
 @onready var blockbench_export: Node3D = $blockbench_export
 @onready var dev_controls: Node = $DevControls
 
-
 @onready var pivot: Node3D = $PlayerCamera
 @export var sens = 0.5
 @onready var hotbar = $HotBar
@@ -20,6 +19,11 @@ class_name Player
 @onready var hotbarInv: Inventory = $HotbarInv
 
 @export var item_pickup_cooldown := 0.2
+#@onready var fireball: Attack = $Fireball
+const FIREBALL_SCENE: PackedScene = preload("res://Attack/Fireball.tscn")
+
+var pivotx
+var pivoty
 var can_pickup_item := true:
 	set(val):
 		if val == false:
@@ -35,7 +39,7 @@ const pause_menu = preload("res://UI/Menu/pause_menu.tscn")
 var mouseSensitivity := 0.1
 var rotation_x := 0.0
 var rotation_y := 0.0
-
+@onready var REALCamera = $PlayerCamera/SpringArm3D/Camera3D
 func _ready() -> void:
 	attackbox_component.enabled = false
 	add_to_group("player")
@@ -48,7 +52,23 @@ func _input(event):
 		rotate_y(deg_to_rad(-event.relative.x * sens))
 		pivot.rotate_x(deg_to_rad(-event.relative.y * sens))
 		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
-
+	if Input.is_action_just_pressed("ability 1"):
+		var fireball = get_node_or_null("Fireball")
+		
+		if fireball == null:
+			fireball = FIREBALL_SCENE.instantiate()
+			get_tree().current_scene.add_child(fireball)
+		elif (fireball.time_left() > 0):
+			print("FIREBALL ALREADY SPAWNED")
+			return 
+		var mouse_pos = get_viewport().get_mouse_position()
+		var aim_dir = REALCamera.project_ray_normal(mouse_pos)
+		
+		# Spawns 1 meter along that cursor ray to avoid front of the camera
+		fireball.global_position = REALCamera.global_position + (aim_dir * 1.0)
+		
+		fireball.launch(aim_dir)
+		fireball.timer.start()
 func _physics_process(_delta: float) -> void:	
 	if not is_inside_tree():
 		return
@@ -62,6 +82,7 @@ func _physics_process(_delta: float) -> void:
 		get_tree().paused = true
 	dev_controls._physics_process(_delta)
 	move_and_slide()
+	#printerr(fireball.timer.time_left)
 
 
 # This function should be called in a State

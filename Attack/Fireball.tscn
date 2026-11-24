@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dq14xs0pg7bd5"]
+
+[ext_resource type="Script" uid="uid://dkdkc12pih5un" path="res://Attack/fireball.gd" id="1_klefn"]
+
+[node name="Fireball" type="Node3D" unique_id=2101515750]
+script = ExtResource("1_klefn")
+
+[node name="Timer" type="Timer" parent="." unique_id=307532459]
+process_callback = 0
+wait_time = 2.0
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1652496757]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3787146, -3.212274)
+use_collision = true
+collision_layer = 9
+collision_mask = 9
+
+[connection signal="ready" from="Timer" to="." method="_on_timer_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

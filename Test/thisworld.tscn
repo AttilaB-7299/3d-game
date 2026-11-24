@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dps10unfp0of6"]
+
+[ext_resource type="PackedScene" uid="uid://d08e75xxf050j" path="res://Enemy/Enemy.tscn" id="1_sctia"]
+[ext_resource type="PackedScene" uid="uid://b7kw64kmr63p7" path="res://Player/Player.tscn" id="2_jdlvn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sctia"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_jdlvn"]
+sky_material = SubResource("ProceduralSkyMaterial_sctia")
+
+[sub_resource type="Environment" id="Environment_ccgsv"]
+background_mode = 2
+sky = SubResource("Sky_jdlvn")
+glow_enabled = true
+
+[node name="Thisworld" type="Node3D" unique_id=722062165]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1056484785]
+environment = SubResource("Environment_ccgsv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1867587498]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 41.958836, -28.835447)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1275264243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -11)
+layers = 3
+use_collision = true
+collision_layer = 3
+collision_mask = 3
+size = Vector3(66, 1, 63)
+
+[node name="Enemy" parent="." unique_id=1821107149 instance=ExtResource("1_sctia")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -31.2975, 0, -39.020473)
+
+[node name="Player" parent="." unique_id=153155451 instance=ExtResource("2_jdlvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18994, 10)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=708257290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 5.5, -3)
+layers = 3
+use_collision = true
+collision_layer = 3
+collision_mask = 3
+size = Vector3(1, 10, 25)

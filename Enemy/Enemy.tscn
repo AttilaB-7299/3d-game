@@ -21,6 +21,7 @@ radius = 1.8
 viewport_path = NodePath("SubViewport")
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1821107149]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_3homo")
@@ -89,5 +90,6 @@ texture = SubResource("ViewportTexture_vm0tb")
 [connection signal="attack" from="AttackBoxComponent" to="." method="_on_attack_box_component_attack"]
 [connection signal="hitbox_entered" from="AttackBoxComponent" to="." method="_on_attack_box_component_hitbox_entered"]
 [connection signal="hitbox_exited" from="AttackBoxComponent" to="." method="_on_attack_box_component_hitbox_exited"]
+[connection signal="hitbox_entered" from="HitBoxComponent" to="." method="_on_enter_hitbox"]
 [connection signal="current_health_changed" from="HealthComponent" to="." method="_on_health_component_current_health_changed"]
 [connection signal="die" from="HealthComponent" to="." method="_on_health_component_die"]

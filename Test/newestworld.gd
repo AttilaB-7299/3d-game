@@ -17,7 +17,7 @@ func _ready():
 	noise.fractal_lacunarity = -2.2
 	noise.fractal_type = FastNoiseLite.FRACTAL_FBM
 	noise.fractal_octaves = 1#1 # Height layers
-	noise.frequency = 0.01 # Hills and valleys
+	noise.frequency = 0.015 # Hills and valleys
 
 func add_chunk(x: int, z: int):
 	var key = "%d,%d" % [x, z]

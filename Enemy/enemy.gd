@@ -105,3 +105,7 @@ func _on_health_component_die() -> void:
 
 func _on_health_component_current_health_changed(by: int) -> void:
 	print_debug("ENEMY HEALTH: " + str($HealthComponent.current_health))
+
+#func _on_enter_hitbox(attackbox: AttackBoxComponent) -> void:
+	#if 
+	#pass # Replace with function body.

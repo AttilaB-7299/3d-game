@@ -2,7 +2,9 @@ extends Node3D
 
 @export var player: Player
 
-@onready var camera := %Camera3D
+@onready var camera: Camera3D = %Camera3D
+
+#@onready var camera: Camera3D = $"."
 
 @export_group("fov")
 @export var default := 75.0

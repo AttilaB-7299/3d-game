@@ -16,9 +16,7 @@ mesh = ExtResource("3_re2od")
 
 [sub_resource type="MultiMesh" id="MultiMesh_34vb5"]
 transform_format = 1
-instance_count = 2
 mesh = ExtResource("4_clsrv")
-buffer = PackedFloat32Array(0.34879392, -0.38774496, -0.8543991, 0.046199884, 0.66553247, 0.74476326, -0.0662975, 0.18751545, 0.66137016, -0.5449612, 0.5173084, -0.1880031, 0.47973225, 0.08511732, 0.8744216, 0.41998288, 0.099312626, 0.9846513, -0.1503329, 0.11562218, -0.8729233, 0.15880184, 0.46345222, -0.23101687)
 
 [sub_resource type="MultiMesh" id="MultiMesh_77ha8"]
 transform_format = 1

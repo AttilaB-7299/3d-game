@@ -1,7 +1,7 @@
 class_name HitBoxComponent extends Area3D
 
-signal attack_box_entered(attackbox: AttackBoxComponent)
-signal attack_box_exited(attackbox: AttackBoxComponent)
+signal hitbox_entered(attackbox: AttackBoxComponent)
+signal hitbox_exited(attackbox: AttackBoxComponent)
 signal hit(by: int)
 
 @export var health_component: HealthComponent
@@ -9,11 +9,11 @@ signal hit(by: int)
 func _ready() -> void:
 	connect("area_entered" , func(area: Area3D):
 		if area is AttackBoxComponent:
-			attack_box_entered.emit(area)
+			hitbox_entered.emit(area)
 	)
 	connect("area_exited" , func(area: Area3D):
 		if area is AttackBoxComponent:
-			attack_box_exited.emit(area)
+			hitbox_exited.emit(area)
 	)
 
 
@@ -22,4 +22,3 @@ func deal_damage(ammount: int):
 	if health_component:
 		hit.emit(ammount)
 		health_component.current_health -= ammount
-

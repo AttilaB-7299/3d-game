@@ -39,7 +39,7 @@ func setup(_noise: FastNoiseLite, _x: int, _z: int, _chunk_size: int, _map_data:
 
 	#generate(100, 100, 100, 5, "Bushes", "null", _noise, _x, _z, _chunk_size, false)
 	generate(3, 3, 3, 1, "Trees", "Capsule", _noise, _x, _z, _chunk_size, true)
-	#generate(20, 3, 20, 100, "Grass", "null", _noise, _x, _z, _chunk_size, false)
+	#generate(10, 3, 10, 300, "Grass", "null", _noise, _x, _z, _chunk_size, false)
 	#generate(100, 100, 100, 5, "Ferns", "Circle", _noise, _x, _z, _chunk_size, false)
 
 	# Collision uses the same heights as the visible mesh
@@ -105,9 +105,9 @@ func _add_face(st: SurfaceTool, a: Vector3, b: Vector3, c: Vector3, rng: RandomN
 	var avg_h := (a.y + b.y + c.y) / 3.0
 	var t := clampf(inverse_lerp(-20.0, 30.0, avg_h), 0.0, 1.0)
 
-	var low_color := Color(0.871, 0.727, 0.43, 1.0)  
-	var mid_color := Color(0.0, 0.565, 0.033, 1.0)  
-	var high_color := Color(0.537, 0.53, 0.494, 1.0) 
+	var low_color := Color(0.546, 0.871, 0.341, 1.0)
+	var mid_color := Color(0.407, 0.696, 0.301, 1.0)
+	var high_color := Color(0.449, 0.626, 0.385, 1.0)
 
 	var col: Color
 	if t < 0.5:
