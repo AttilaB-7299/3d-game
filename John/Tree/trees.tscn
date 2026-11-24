@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://stli51ge1bfv"]
+
+[ext_resource type="Script" uid="uid://b4ko37xg1t354" path="res://John/Tree/trees.gd" id="1_crxs4"]
+[ext_resource type="ArrayMesh" uid="uid://dabdrsuv4jhny" path="res://Meshes/tree.tres" id="2_bk8db"]
+[ext_resource type="Script" uid="uid://bu8foyn0ppobj" path="res://Components/health_component.gd" id="2_crxs4"]
+[ext_resource type="Script" uid="uid://by2kl8xdwu0hs" path="res://Components/hitbox_component.gd" id="3_bk8db"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vm0tb"]
+height = 2.918457
+
+[node name="Trees" type="Node3D" unique_id=1997790832]
+script = ExtResource("1_crxs4")
+meshes = Array[Mesh]([ExtResource("2_bk8db")])
+metadata/_custom_type_script = "uid://d03grw41wfxqo"
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1387248043]
+script = ExtResource("2_crxs4")
+metadata/_custom_type_script = "uid://bu8foyn0ppobj"
+
+[node name="HitBoxComponent" type="Area3D" parent="." unique_id=856650113 node_paths=PackedStringArray("health_component")]
+script = ExtResource("3_bk8db")
+health_component = NodePath("../HealthComponent")
+metadata/_custom_type_script = "uid://by2kl8xdwu0hs"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBoxComponent" unique_id=1553856537]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17779481, 0)
+shape = SubResource("CapsuleShape3D_vm0tb")
